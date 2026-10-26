@@ -27,10 +27,47 @@ secret audit. Identified a tracked avatar and local migration markers for
 exclusion; no private upload content was read. Gitleaks 8.30.1 was downloaded
 from its official release and its archive SHA-256 matched the published checksum.
 
-Final export, scan, commit and remote visibility results will be recorded below
-after execution. No runtime migration, seed, business-record query, email or
-deployment is part of this task. Existing native test results are historical,
-not publication-time reruns.
+Published https://github.com/jmoarceo-cloud/manage-grocery-main publicly on
+`main`. Initial source commit:
+`fc6bc9ed8db4481c80cfcf575c417decb9533140`, authored by John Mark O. Arceo with
+the supplied email. This separate repository contains 771 files (about25 MB),
+both application sources, documentation and synthetic/source-derived evidence.
+The original repository's HEAD/index/history/remotes were not changed by the
+publication workflow. Existing runtime work remains in place.
+
+Exact meaningful publication checks:
+
+- `storage/tooling/node/node-v24.22.1-win-x64/node.exe storage/publishing/prepare-public.cjs verify`:
+  771 files;17 configured-secret checks; zero forbidden paths, known-secret
+  matches, data statements in the four schema-only artifacts or broken links
+  in README, PUBLISHING and the documentation index.337 original source-hash
+  entries were checked for source-file-only TSV format before copying.
+- `storage/tooling/gitleaks/v8.30.1/gitleaks.exe dir storage/publishing/groceryone-public --redact=100 --no-banner --report-format json --report-path storage/publishing/gitleaks-working-tree.json --log-level error`:
+  exit0, no findings. The equivalent `git` scan with report
+  `storage/publishing/gitleaks-history.json` also exited0 with no findings.
+- `php -l` passed for exported `project/HRMS/create_admin.php`,
+  `project/HRMS/reset_password.php` and `project/HRMS/includes/mailer.php`.
+  Only generic setup values/comment examples differ in these exported files;
+  local originals are unchanged. Syntax checks did not execute their includes.
+- `php storage/publishing/groceryone-public/bin/check-docs.php --staged` and
+  the configured pre-commit documentation hook passed. Scoped
+  `git diff --check` passed after correcting two README line breaks.
+- `git check-ignore --no-index` confirmed all nine synthetic private-path probes
+  are ignored, including nested environment variants, uploads and backups.
+  Explicit export filtering also removes already-tracked private paths.
+- `git push --set-upstream origin main` succeeded. Anonymous GitHub REST
+  requests confirmed `visibility=public`, `private=false`, default branch
+  `main`, the exact source commit,771 blobs, the supplied author email and
+  README contact. Recursive tree inspection found zero forbidden paths; the
+  repository page returned HTTP200 without authentication.
+
+Limits: automated scans cannot prove absence of every sensitive string. Public
+history starts clean rather than exposing unaudited old commits. No original
+private upload was opened or uploaded. No runtime migration, seed,
+business-record query, Gmail message or app deployment was performed. Existing
+native tests are prior results, not publication-time reruns. The complete
+Laravel/original-interface migration remains unfinished. Later documentation
+commits record publication outcomes without changing application behavior.
 
 ## 2026-10-26 - Original PHP loading stall fixed
 

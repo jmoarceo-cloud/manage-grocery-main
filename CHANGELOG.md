@@ -5,7 +5,7 @@ Keep a Changelog style. Historical notes remain in
 
 ## [Unreleased]
 
-### Documentation - 2026-10-26, public GitHub source preparation
+### Documentation - 2026-10-26, public GitHub source publication
 
 - Added a public project overview with the owner's supplied author/contact
   email, two application paths, feature coverage, setup and verification limits.
@@ -14,6 +14,9 @@ Keep a Changelog style. Historical notes remain in
 - Strengthened ignore rules for private environment variants, local migration
   markers, credentials and archives. Publication excludes private uploads,
   real-data screenshots and database backups; it does not deploy the app.
+- Published 771 reviewed files to public `jmoarceo-cloud/manage-grocery-main`
+  on `main`, with the requested author email. Redacted source/history secret
+  scans passed; anonymous GitHub access and the initial source commit matched.
 
 ### Changed - 2026-10-26, preserve original nutrition comparison
 

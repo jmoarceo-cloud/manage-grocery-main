@@ -6,6 +6,14 @@ author/contact address, `jmoarceo@pcu.edu.ph`.
 
 Repository: [jmoarceo-cloud/manage-grocery-main](https://github.com/jmoarceo-cloud/manage-grocery-main).
 
+**Published publicly.** The initial 771-file source snapshot is commit
+[`fc6bc9e`](https://github.com/jmoarceo-cloud/manage-grocery-main/commit/fc6bc9ed8db4481c80cfcf575c417decb9533140)
+on `main`, authored with the supplied email. Anonymous API access confirmed
+public visibility, the expected branch/commit/file count and zero forbidden
+paths; an unauthenticated repository-page request returned HTTP 200. The
+working-tree and clean-history Gitleaks scans found no secrets. See PROGRESS
+for exact checks and limits. Subsequent documentation commits record this result.
+
 This is a source publication. It does not host the PHP application, expose its
 databases, complete the Laravel migration or verify production availability.
 No announcement email is sent as part of publication.
