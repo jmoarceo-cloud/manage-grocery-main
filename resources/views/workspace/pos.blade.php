@@ -1,0 +1,24 @@
+@extends('layouts.workspace')
+@section('title','Checkout')
+@section('content')
+<div class="page-heading"><div><span class="eyebrow">READY FOR THE NEXT GOOD FIND</span><h1>Checkout.</h1><p>Scan an item or search the catalog to begin.</p></div><span class="keyboard-hint"><kbd>F2</kbd> Search <kbd>F9</kbd> Pay</span></div>
+<div id="pos-app" data-lookup="{{ route('pos.lookup') }}" data-checkout="{{ route('pos.checkout') }}" data-discount-requests="{{ route('discounts.available') }}" data-receipt-base="{{ url('/receipts') }}" data-request-base="{{ url('/api/pos/requests') }}" data-cashier="{{ request()->attributes->get('staff')->id }}">
+<div id="pos-error" class="notice notice-error" role="alert" hidden></div>
+<div class="register-grid">
+<section class="panel cart-panel"><div class="panel-heading"><h2>Current basket</h2><span id="cart-count" class="count-chip">0 items</span></div>
+<form id="product-search" class="filter-bar"><label class="search-field"><span class="sr-only">Product or barcode</span><input id="barcode-search" autocomplete="off" placeholder="Scan barcode or search products..." autofocus required></label><button class="button">Find item</button></form>
+<div id="search-results" class="search-results" aria-live="polite"></div><div class="table-wrap"><table><thead><tr><th>Item</th><th>Quantity</th><th class="number">Amount</th><th></th></tr></thead><tbody id="cart-lines"><tr><td colspan="4"><div class="empty-state"><span class="empty-basket">&#9635;</span><h2>A fresh start.</h2><p>Scan your first item to build the basket.</p></div></td></tr></tbody></table></div></section>
+<aside class="panel payment-panel"><div class="panel-heading"><h2>Payment summary</h2></div>
+<form id="payment-form" class="form-panel"><div class="total-line"><span>Subtotal</span><strong id="cart-subtotal">PHP 0.00</strong></div>
+<label>Discount<select id="discount-type" name="discount_type" aria-label="Checkout discount"><option value="none">No additional discount</option><option value="senior">Senior citizen - approved 20%</option><option value="pwd">PWD - approved 20%</option><option value="approved">Finance-approved request</option></select></label>
+<div id="discount-details" hidden><label>ID number<input name="discount_id_number" maxlength="20"></label><label>Cardholder name<input name="discount_holder_name" maxlength="150"></label><label>Supervisor username<input name="supervisor_username" autocomplete="off" maxlength="50"></label><label>Supervisor password<input type="password" name="supervisor_password" autocomplete="off"></label></div>
+<div id="approval-details" hidden><label>Approved discount<select id="approved-discount-request" name="discount_request_id" aria-label="Approved discount request"><option value="">Loading approved requests</option></select></label><button id="refresh-discounts" type="button" class="text-button">Refresh approved requests</button></div>
+<div class="grand-total"><span>Basket total</span><strong id="cart-total">PHP 0.00</strong><small>Final total is confirmed at checkout.</small></div>
+<label>Amount received<input name="payment" id="amount-received" type="number" min="0" step="0.01" required placeholder="0.00" inputmode="decimal"></label><button class="button pay-button" id="pay-button">Complete sale <span>&#8594;</span></button><p class="form-note">Check the basket and payment before completing the sale.</p></form></aside>
+</div>
+<section class="panel manual-discount-panel"><div class="panel-heading"><div><span class="eyebrow">FINANCE APPROVAL</span><h2>Request a basket discount</h2></div><a class="text-link" href="{{ route('discounts.index') }}">Track requests &#8599;</a></div>
+<form id="manual-discount-form" class="form-panel"><p class="muted">Uses the current basket and server prices. Finance must approve before the discount can be applied.</p><div id="discount-request-status" class="notice notice-success" role="status" hidden></div>
+<div class="form-grid"><label>Request type<select name="discount_type" aria-label="Manual discount type"><option value="percent">Percentage off</option><option value="fixed">Fixed amount off</option></select></label><label>Requested value<input name="discount_value" type="number" min="0.01" step="0.01" max="99999999.99" required></label><label class="full-width">Request reason<input name="reason" maxlength="255"></label></div><div class="form-actions"><button class="button button-outline">Send discount request</button></div></form></section>
+</div>
+<dialog id="receipt-dialog" aria-labelledby="receipt-title"><div class="dialog-inner"><span class="success-symbol">&#10003;</span><h2 id="receipt-title">Sale complete.</h2><div id="receipt-summary"></div><div class="dialog-actions"><a id="receipt-link" class="button" target="_blank" rel="noopener">View &amp; print receipt</a><button class="button button-outline" data-close-dialog>Next customer</button></div></div></dialog>
+@endsection

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "openaiDeveloperDocs": {
+      "httpUrl": "https://developers.openai.com/mcp",
+      "timeout": 60000
+    },
+    "context7": {
+      "httpUrl": "https://mcp.context7.com/mcp",
+      "timeout": 60000
+    }
+  }
+}

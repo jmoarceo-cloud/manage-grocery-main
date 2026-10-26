@@ -1,0 +1,12 @@
+# Project-local public documentation tools. Client trust is required.
+# No model/approval/global settings are changed.
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+startup_timeout_sec = 30
+tool_timeout_sec = 60
+
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"
+startup_timeout_sec = 30
+tool_timeout_sec = 60

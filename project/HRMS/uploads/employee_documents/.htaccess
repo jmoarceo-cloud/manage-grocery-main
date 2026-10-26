@@ -1,0 +1,21 @@
+# Employee documents must be accessed through the authenticated PHP download
+# endpoint, never served directly from this directory.
+
+# Apache 2.4+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+# Apache 2.2 and earlier
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
+
+# Defense in depth in case authorization rules are misconfigured.
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>

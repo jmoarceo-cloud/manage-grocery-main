@@ -1,0 +1,73 @@
+{
+    "date": "2026-10-26",
+    "timezone": "Asia/Manila",
+    "syntax": {
+        "binary": "C:/xampp/php84/php.exe",
+        "runtime": "8.4.26",
+        "argv": [
+            "-l",
+            "<each PHP source under app,bin,config,public,tests,project>"
+        ],
+        "checked": 273,
+        "failed": 0,
+        "limits": "Syntax only; no application/config included by lint."
+    },
+    "http": {
+        "command": "Invoke-WebRequest -UseBasicParsing -TimeoutSec 20",
+        "probes": [
+            {
+                "path": "/manage-grocery-main/public/",
+                "status": 200
+            },
+            {
+                "path": "/manage-grocery-main/public/login",
+                "status": 200
+            },
+            {
+                "path": "/manage-grocery-main/composer.json",
+                "status": 200
+            },
+            {
+                "path": "/manage-grocery-main/docs/README.md",
+                "status": 200
+            }
+        ],
+        "server": "Apache/2.4.58, PHP/8.4.26",
+        "limits": "No login/mutation/private file/legacy bootstrap requested; page availability and parent-path serving only. Reviewed MVC public GET queries are reads; normal sessions may create runtime session files."
+    },
+    "database": {
+        "method": "Standalone PDO read-only transactions and schema-only mysqldump",
+        "tables": 77,
+        "aggregate_rows": 8632,
+        "data_backup": false,
+        "data_import": false,
+        "record_values_exported": false
+    },
+    "framework_installed": false,
+    "business_flow_tests_run": false,
+    "git_repository_created": false,
+    "final_artifact_checks": {
+        "source_fingerprints_checked": 337,
+        "source_changes": 0,
+        "legacy_entry_candidates_mapped": 135,
+        "open_parity_boxes": 190,
+        "checked_parity_boxes": 0,
+        "markdown_files_checked": 29,
+        "local_links_checked": 123,
+        "broken_local_links": 0,
+        "schema_table_counts": {
+            "grocery_pos": 42,
+            "hrms": 35
+        },
+        "schema_trigger_counts": {
+            "grocery_pos": 2,
+            "hrms": 0
+        },
+        "schema_record_insert_statements": 0,
+        "schema_hashes_match": true,
+        "definer_credentials_remaining": false,
+        "limited_secret_pattern_hits": 0,
+        "original_document_filename_hits": 0,
+        "limits": "Integrity covers fingerprinted PHP/CSS/JS/SQL sources. Secret/filename checks are bounded pattern/reference checks, not comprehensive DLP or secret scanning. No additional runtime behavior tested."
+    }
+}

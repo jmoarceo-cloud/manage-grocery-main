@@ -1,0 +1,12 @@
+parameters:
+    level: 6
+    paths:
+        - app
+        - config
+    excludePaths:
+        - storage
+        - vendor
+        - project
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+

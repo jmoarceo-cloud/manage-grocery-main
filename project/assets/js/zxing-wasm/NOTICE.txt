@@ -1,0 +1,10 @@
+ZXing-WASM 3.1.4
+Package: https://www.npmjs.com/package/zxing-wasm
+Source: https://github.com/Sec-ant/zxing-wasm
+License: MIT (see LICENSE)
+
+The bundled reader module is loaded only when the primary image decoder does
+not recognize a code. Image decoding is performed locally in the browser.
+
+Verified npm archive integrity:
+sha512-1+v8p7sauddySVNG+ye7GD/0TS95BG2ycdkrC+EnBrFBFkHeIghzUt2yVjtx3NucJeNrQnhT8yGAIz60Vx9o0w==

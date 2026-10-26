@@ -1,0 +1,236 @@
+
+        body {
+            display: grid;
+            min-height: 100vh;
+            padding: 28px 20px;
+            place-items: center;
+            background-color: var(--background);
+            background-image:
+                linear-gradient(to right, color-mix(in srgb, var(--border) 35%, transparent) 1px, transparent 1px),
+                linear-gradient(to bottom, color-mix(in srgb, var(--border) 35%, transparent) 1px, transparent 1px);
+            background-size: 42px 42px;
+            color: var(--text);
+            font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+        }
+
+        .card {
+            width: min(460px, 100%);
+            padding: 34px;
+            border-color: var(--border);
+            border-radius: 18px;
+            background: var(--surface);
+            box-shadow: var(--shadow-surface);
+        }
+
+        .brand {
+            gap: 12px;
+            margin-bottom: 34px;
+        }
+
+        .brand-mark {
+            width: 46px;
+            height: 46px;
+            flex: 0 0 auto;
+            border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
+            border-radius: 13px;
+            background: var(--accent);
+            box-shadow: none;
+        }
+
+        html[data-theme="dark"] .brand-mark {
+            border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+            background: var(--accent);
+        }
+
+        .brand-mark svg {
+            width: 27px;
+        }
+
+        .brand-name {
+            font: 800 15px "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+            letter-spacing: -.03em;
+        }
+
+        .brand-role {
+            color: var(--accent);
+        }
+
+        .icon-badge {
+            width: 48px;
+            height: 48px;
+            border-color: var(--border);
+            border-radius: 13px;
+            background: var(--surface-muted);
+            color: var(--accent);
+        }
+
+        .icon-badge svg {
+            width: 23px;
+        }
+
+        h1 {
+            margin: 0 0 9px;
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(32px, 7vw, 40px);
+            font-weight: 500;
+            letter-spacing: -.055em;
+            line-height: 1.08;
+        }
+
+        p.sub {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        p.sub strong {
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .alert {
+            border-color: var(--border);
+            border-radius: 12px;
+            background: var(--surface-muted);
+        }
+
+        .alert--error {
+            border-color: #fda4af;
+            background: color-mix(in srgb, #e11d48 8%, var(--surface));
+            color: #be123c;
+        }
+
+        html[data-theme="dark"] .alert--error {
+            border-color: color-mix(in srgb, #fda4af 35%, var(--border));
+            background: color-mix(in srgb, #e11d48 15%, var(--surface));
+            color: #fecdd3;
+        }
+
+        .alert--info {
+            border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
+            background: var(--surface-muted);
+            color: var(--accent);
+        }
+
+        .otp-input,
+        .backup-box input {
+            border-color: var(--border);
+            border-radius: 10px;
+            background: var(--surface-muted);
+            color: var(--text);
+            font-family: inherit;
+        }
+
+        .otp-input {
+            height: 58px;
+            font-size: 25px;
+        }
+
+        .otp-input:focus,
+        .backup-box input:focus {
+            border-color: var(--accent);
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 1px;
+            box-shadow: none;
+        }
+
+        .btn-submit,
+        .backup-box .btn-secondary {
+            border-color: var(--accent);
+            border-radius: 10px;
+            background: var(--accent);
+            color: var(--accent-foreground);
+            font-family: inherit;
+            font-weight: 700;
+        }
+
+        .btn-submit:hover,
+        .backup-box .btn-secondary:hover {
+            border-color: var(--accent-hover);
+            background: var(--accent-hover);
+            box-shadow: var(--shadow-surface);
+        }
+
+        .link-row {
+            align-items: center;
+            gap: 12px;
+            font-family: inherit;
+        }
+
+        .link-row button {
+            border-color: var(--border);
+            border-radius: 9px;
+            background: var(--surface);
+            color: var(--accent);
+            font-family: inherit;
+        }
+
+        html[data-theme="dark"] .link-row button {
+            color: #93c5fd;
+        }
+
+        .link-row button:hover,
+        .link-row button:focus-visible {
+            border-color: var(--accent-hover);
+            background: var(--accent-hover);
+            color: var(--accent-foreground);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(29, 78, 216, .2);
+        }
+
+        html[data-theme="dark"] .link-row button:hover,
+        html[data-theme="dark"] .link-row button:focus-visible {
+            border-color: #1d4ed8;
+            background: #1d4ed8;
+            color: #fff;
+        }
+
+        .link-row button:focus-visible {
+            outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent);
+            outline-offset: 2px;
+        }
+
+        .link-row a {
+            color: var(--text-muted) !important;
+            text-underline-offset: 3px;
+        }
+
+        .link-row a:hover {
+            color: var(--accent) !important;
+        }
+
+        .backup-box {
+            border-color: var(--border);
+        }
+
+        .backup-box input {
+            border-radius: 9px;
+        }
+
+        .backup-box .btn-secondary {
+            min-height: 42px;
+        }
+
+        .backup-box summary {
+            color: var(--text-muted);
+        }
+
+        .backup-box summary:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 560px) {
+            body {
+                padding: 18px 14px;
+            }
+
+            .card {
+                padding: 26px 22px;
+            }
+
+            .brand {
+                margin-bottom: 28px;
+            }
+        }
+    

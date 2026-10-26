@@ -1,0 +1,20 @@
+{
+    "date": "2026-10-26",
+    "target": "APP_ENV=testing; exact name/nonce-verified synthetic pair; project-local MariaDB 127.0.0.1:3307",
+    "php": "8.4.26",
+    "phpunit": "12.5.40",
+    "tests": 216,
+    "assertions": 8662,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "browser": {
+        "passed": 17,
+        "unexpected": 0,
+        "skipped": 1,
+        "flaky": 0,
+        "duration_ms": 135779.72,
+        "skip_reason": "Retained legacy public baseline explicitly skipped after recorded HTTP503; shared3306 had no listener at the last check. Earlier passing baseline evidence is historical."
+    },
+    "limits": "Synthetic native integration/Chromium; legacy baseline status is explicit in browser counts. Public availability probes are timestamped single samples in PUBLIC_HTTP_CHECKS.json. No live authenticated transaction, production load, physical scanner, full recovery or complete migration parity claim."
+}

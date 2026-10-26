@@ -1,0 +1,16 @@
+@extends('layouts.workspace')
+@section('title',($record?'Edit ':'Add ').\Illuminate\Support\Str::singular($definition['title']))
+@section('content')
+<div class="page-heading"><div><a class="text-link" href="{{ route('manage.index',$entity) }}">&#8592; Back to {{ strtolower($definition['title']) }}</a><h1>{{ $record?'Edit':'Add' }} {{ \Illuminate\Support\Str::singular(strtolower($definition['title'])) }}.</h1></div></div>
+<form class="panel form-panel" method="post" action="{{ $record?route('manage.update',[$entity,$record->id]):route('manage.store',$entity) }}" data-busy>@csrf @if($record)@method('PUT')@endif<div class="form-grid">@foreach($definition['fields'] as $field=>$label)<label>{{ $label }}
+@if($field==='category')<select name="{{ $field }}"><option value="">Uncategorized</option>@foreach($categories as $category)<option value="{{ $category->category_name }}" @selected(old($field,$record->$field??'')===$category->category_name)>{{ $category->category_name }}</option>@endforeach</select>
+@elseif($field==='supplier_id')<select name="{{ $field }}"><option value="">No supplier</option>@foreach($suppliers as $supplier)<option value="{{ $supplier->id }}" @selected((string)old($field,$record->$field??'')===(string)$supplier->id)>{{ $supplier->company_name }}</option>@endforeach</select>
+@elseif($field==='is_active')<select name="is_active"><option value="1" @selected(old($field,$record->$field??1)==1)>Active</option><option value="0" @selected(old($field,$record->$field??1)==0)>Inactive</option></select>
+@elseif($field==='status')<select name="status"><option value="active" @selected(old($field,$record->$field??'active')==='active')>Active</option><option value="inactive" @selected(old($field,$record->$field??'active')==='inactive')>Inactive</option></select>
+@elseif(in_array($field,['notes','address']))<textarea name="{{ $field }}" rows="3">{{ old($field,$record->$field??'') }}</textarea>
+@else<input name="{{ $field }}" value="{{ old($field,$record->$field??($field==='payment_terms_days'?30:'')) }}" type="{{ $field==='email'?'email':(in_array($field,['price','cost_price','payment_terms_days'])?'number':'text') }}" @if(in_array($field,['price','cost_price'])) step="0.01" min="0" @endif @if(in_array($field,['product_name','category_name','company_name','price','cost_price','payment_terms_days'])) required @endif>
+@endif @error($field)<small class="field-error">{{ $message }}</small>@enderror</label>@endforeach</div>
+@if($entity==='products')<p class="form-note">New products start with zero stock. Inventory changes are recorded through the authorized stock workflow.</p>@endif<div class="form-actions"><a class="button button-outline" href="{{ route('manage.index',$entity) }}">Cancel</a><button class="button">Save changes &#8594;</button></div></form>
+@if($entity==='products'&&$record)<p class="form-note">Product discount changes require Finance approval. <a class="text-link" href="{{ route('product-discounts.index',['product_id'=>$record->id]) }}">Request a product discount change &#8599;</a></p>@endif
+@if($entity==='products'&&$record)<p class="form-note"><a class="text-link" href="{{ route('product-information.edit',$record->id) }}">Edit and review product information &#8599;</a></p>@endif
+@endsection

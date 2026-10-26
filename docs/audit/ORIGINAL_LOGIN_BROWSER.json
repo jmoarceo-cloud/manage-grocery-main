@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-26",
+  "reference": "Static original initial login presentation from source text, with original shared CSS and theme script; no legacy PHP executed",
+  "reduced_motion": true,
+  "results": [
+    {
+      "viewport": "desktop",
+      "theme": "light",
+      "changed_pixels": 0,
+      "total_pixels": 1440000,
+      "ratio": 0
+    },
+    {
+      "viewport": "desktop",
+      "theme": "dark",
+      "changed_pixels": 0,
+      "total_pixels": 1440000,
+      "ratio": 0
+    },
+    {
+      "viewport": "mobile",
+      "theme": "light",
+      "changed_pixels": 0,
+      "total_pixels": 329160,
+      "ratio": 0
+    },
+    {
+      "viewport": "mobile",
+      "theme": "dark",
+      "changed_pixels": 0,
+      "total_pixels": 329160,
+      "ratio": 0
+    }
+  ]
+}

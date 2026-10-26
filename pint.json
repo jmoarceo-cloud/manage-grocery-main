@@ -1,0 +1,4 @@
+{
+    "preset": "laravel",
+    "exclude": ["database/backups", "storage", "project", "project.bak.20261026", ".laravel-staging", ".kombai"]
+}

@@ -1,0 +1,189 @@
+.login-page {
+    background-color: var(--bg);
+    color: var(--text-body);
+}
+
+.login-shell {
+    color: var(--text-body);
+}
+
+.login-shell .theme-toggle.theme-toggle,
+.navbar .theme-toggle.theme-toggle {
+    min-height: 38px;
+    height: 38px;
+    padding: 8px 11px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface-soft);
+    color: var(--text-body, var(--text));
+    box-shadow: none;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, border-color .22s ease, color .22s ease;
+}
+
+.login-shell .theme-toggle.theme-toggle:hover,
+.navbar .theme-toggle.theme-toggle:hover {
+    border-color: var(--border);
+    background: var(--surface-soft);
+    color: var(--text-heading);
+    transform: none;
+    box-shadow: none;
+}
+
+.login-shell .theme-toggle.theme-toggle:focus-visible,
+.navbar .theme-toggle.theme-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.login-shell .theme-toggle.theme-toggle > span,
+.navbar .theme-toggle.theme-toggle > span {
+    display: inline;
+}
+
+.login-shell .back-link,
+.navbar .back-btn,
+.navbar .private-access,
+.catalog-header .clear-link {
+    min-height: 38px;
+    height: auto;
+    padding: 8px 11px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text-body, var(--text));
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, border-color .22s ease, color .22s ease;
+}
+
+.login-shell .back-link:hover,
+.navbar .back-btn:hover,
+.navbar .private-access:hover,
+.catalog-header .clear-link:hover {
+    border-color: var(--border);
+    background: var(--surface-soft);
+    color: var(--text-heading, var(--text));
+    transform: translateY(-1px);
+}
+
+.navbar .nav-left .private-access:hover {
+    transform: translate(-50%, -1px);
+}
+
+.login-shell .btn-submit,
+.catalog-header .btn-search {
+    min-height: 38px;
+    height: 40px;
+    padding: 8px 16px;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    box-shadow: none;
+    transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, border-color .22s ease;
+}
+
+.login-shell .btn-submit:hover,
+.catalog-header .btn-search:hover {
+    border-color: var(--accent-hover, var(--accent));
+    background: var(--accent-hover, var(--accent));
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.login-shell .field-input,
+.catalog-header .search-input,
+.catalog-page .filter-sidebar select {
+    border-radius: 8px;
+}
+
+.login-shell .password-toggle {
+    border-radius: 8px;
+}
+
+.catalog-page .filter-item {
+    border-radius: 8px;
+}
+
+.login-shell .login-card,
+.catalog-page .filter-sidebar,
+.catalog-page .product-card {
+    border-radius: 10px;
+}
+
+.login-shell .login-card::before {
+    border-radius: 10px 10px 0 0;
+}
+
+.login-shell .login-card {
+    background: var(--surface);
+    box-shadow: 0 8px 22px color-mix(in srgb, var(--text-body, var(--text)) 4%, transparent);
+}
+
+.login-shell .alert {
+    border-radius: 8px;
+}
+
+.catalog-page {
+    background-color: var(--bg);
+    color: var(--text-body);
+}
+
+.catalog-page .store-info-item {
+    border-radius: 10px;
+}
+
+html[data-theme="dark"] .login-shell .theme-toggle.theme-toggle,
+html[data-theme="dark"] .navbar .theme-toggle.theme-toggle,
+html[data-theme="dark"] .login-shell .back-link,
+html[data-theme="dark"] .navbar .back-btn,
+html[data-theme="dark"] .navbar .private-access,
+html[data-theme="dark"] .catalog-header .clear-link {
+    border-color: var(--border);
+    background: var(--surface-soft);
+    color: var(--text-body, var(--text));
+}
+
+html[data-theme="dark"] .login-shell .theme-toggle.theme-toggle:hover,
+html[data-theme="dark"] .navbar .theme-toggle.theme-toggle:hover,
+html[data-theme="dark"] .login-shell .back-link:hover,
+html[data-theme="dark"] .navbar .back-btn:hover,
+html[data-theme="dark"] .navbar .private-access:hover,
+html[data-theme="dark"] .catalog-header .clear-link:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--text-heading, var(--text));
+}
+
+@media (max-width: 600px) {
+    .login-shell .login-card {
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 560px) {
+    .navbar .back-btn {
+        width: 34px;
+        flex-basis: 34px;
+        justify-content: center;
+        padding: 0;
+        font-size: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar .back-btn {
+        width: 30px;
+        flex-basis: 30px;
+    }
+}

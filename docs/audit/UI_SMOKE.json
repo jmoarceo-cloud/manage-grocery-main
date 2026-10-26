@@ -1,0 +1,190 @@
+{
+  "config": {
+    "argv": [
+      "C:\\xampp\\htdocs\\manage-grocery-main\\storage\\tooling\\node\\node-v24.22.1-win-x64\\node.exe",
+      "C:\\xampp\\htdocs\\manage-grocery-main\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/original-ui.spec.js",
+      "--grep",
+      "original POS and HR verification"
+    ],
+    "configFile": "C:\\xampp\\htdocs\\manage-grocery-main\\playwright.config.js",
+    "rootDir": "C:/xampp/htdocs/manage-grocery-main/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/xampp/htdocs/manage-grocery-main/storage/testing/playwright-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/xampp/htdocs/manage-grocery-main/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\xampp\\htdocs\\manage-grocery-main\\storage\\testing\\playwright-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\xampp\\htdocs\\manage-grocery-main\\tests\\browser",
+        "snapshotDir": "C:\\xampp\\htdocs\\manage-grocery-main\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "browserName": "chromium",
+          "headless": true,
+          "trace": "off",
+          "video": "off"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/audit/UI_SMOKE.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "php -S 127.0.0.1:8017 -t public bin/qa-router.php",
+      "url": "http://127.0.0.1:8017/__qa/target",
+      "reuseExistingServer": true,
+      "env": {
+        "APP_ENV": "testing",
+        "MAIL_MAILER": "array",
+        "SESSION_PATH": "/",
+        "APP_URL": "http://127.0.0.1:8017"
+      },
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "original-ui.spec.js",
+      "file": "original-ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "original POS and HR verification screens match source presentation with private pending authentication",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20024,
+                  "error": {
+                    "message": "Error: hr/mobile/light original verification difference\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.002\u001b[39m\nReceived:   \u001b[31m0.0034238668124924048\u001b[39m",
+                    "stack": "Error: hr/mobile/light original verification difference\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.002\u001b[39m\nReceived:   \u001b[31m0.0034238668124924048\u001b[39m\n    at C:\\xampp\\htdocs\\manage-grocery-main\\tests\\browser\\original-ui.spec.js:265:110",
+                    "location": {
+                      "file": "C:\\xampp\\htdocs\\manage-grocery-main\\tests\\browser\\original-ui.spec.js",
+                      "column": 110,
+                      "line": 265
+                    },
+                    "snippet": "  263 |                     results.push({ domain, viewport: label, theme, ...difference });\n  264 |                     await fs.writeFile('storage/testing/original-mfa-measurements.json', JSON.stringify(results, null, 2));\n> 265 |                     expect(difference.ratio, `${domain}/${label}/${theme} original verification difference`).toBeLessThan(0.002);\n      |                                                                                                              ^\n  266 |                     await page.locator('details.backup-box > summary').click();\n  267 |                     await expect(page.getByLabel('Backup code', { exact: true })).toBeVisible();\n  268 |                     expect(external).toEqual([]);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\xampp\\htdocs\\manage-grocery-main\\tests\\browser\\original-ui.spec.js",
+                        "column": 110,
+                        "line": 265
+                      },
+                      "message": "Error: hr/mobile/light original verification difference\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.002\u001b[39m\nReceived:   \u001b[31m0.0034238668124924048\u001b[39m\n\n  263 |                     results.push({ domain, viewport: label, theme, ...difference });\n  264 |                     await fs.writeFile('storage/testing/original-mfa-measurements.json', JSON.stringify(results, null, 2));\n> 265 |                     expect(difference.ratio, `${domain}/${label}/${theme} original verification difference`).toBeLessThan(0.002);\n      |                                                                                                              ^\n  266 |                     await page.locator('details.backup-box > summary').click();\n  267 |                     await expect(page.getByLabel('Backup code', { exact: true })).toBeVisible();\n  268 |                     expect(external).toEqual([]);\n    at C:\\xampp\\htdocs\\manage-grocery-main\\tests\\browser\\original-ui.spec.js:265:110"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:33:22.976Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\xampp\\htdocs\\manage-grocery-main\\storage\\testing\\playwright-results\\original-ui-original-POS-a-a4518-vate-pending-authentication\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\xampp\\htdocs\\manage-grocery-main\\tests\\browser\\original-ui.spec.js",
+                    "column": 110,
+                    "line": 265
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6c7eebdc4e68dfda3051-bdd62f4ac07aed9527fa",
+          "file": "original-ui.spec.js",
+          "line": 218,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T12:33:21.832Z",
+    "duration": 21486.977,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

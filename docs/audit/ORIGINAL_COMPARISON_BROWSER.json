@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-26",
+  "reference": "Pinned source presentation using native synthetic verified data; no original bootstrap/config/queries executed",
+  "captures": "Initial viewport and selected table only; native selected picker state is intentionally retained",
+  "reduced_motion": true,
+  "results": [
+    {
+      "state": "initial viewport",
+      "viewport": "desktop",
+      "theme": "light",
+      "changed_pixels": 0,
+      "total_pixels": 1440000,
+      "ratio": 0
+    },
+    {
+      "state": "selected result table",
+      "viewport": "desktop",
+      "theme": "light",
+      "changed_pixels": 0,
+      "total_pixels": 609168,
+      "ratio": 0
+    },
+    {
+      "state": "initial viewport",
+      "viewport": "desktop",
+      "theme": "dark",
+      "changed_pixels": 0,
+      "total_pixels": 1440000,
+      "ratio": 0
+    },
+    {
+      "state": "selected result table",
+      "viewport": "desktop",
+      "theme": "dark",
+      "changed_pixels": 0,
+      "total_pixels": 609168,
+      "ratio": 0
+    },
+    {
+      "state": "initial viewport",
+      "viewport": "mobile",
+      "theme": "light",
+      "changed_pixels": 0,
+      "total_pixels": 329160,
+      "ratio": 0
+    },
+    {
+      "state": "selected result table",
+      "viewport": "mobile",
+      "theme": "light",
+      "changed_pixels": 0,
+      "total_pixels": 240768,
+      "ratio": 0
+    },
+    {
+      "state": "initial viewport",
+      "viewport": "mobile",
+      "theme": "dark",
+      "changed_pixels": 4,
+      "total_pixels": 329160,
+      "ratio": 0.000012152144853566655
+    },
+    {
+      "state": "selected result table",
+      "viewport": "mobile",
+      "theme": "dark",
+      "changed_pixels": 0,
+      "total_pixels": 240768,
+      "ratio": 0
+    }
+  ]
+}

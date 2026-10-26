@@ -1,0 +1,75 @@
+# Secrets
+.env
+**/.env
+!**/.env.example
+!**/.env.production.example
+
+# Database dumps with real data (keep schema + migrations)
+/*.sql
+DATABASE_DUMPS/
+project/database/exports/
+
+# User-uploaded files (employee/applicant documents, receipts, avatars)
+project/uploads/
+project/HRMS/uploads/
+!project/HRMS/uploads/
+!project/HRMS/uploads/employee_documents/
+!project/HRMS/uploads/employee_documents/.htaccess
+
+# Misc
+*.lnk
+*.log
+vendor/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Migration safety and private runtime state
+/database/backups/
+/project.bak.*/
+/.laravel-staging/
+/storage/
+/bootstrap/cache/*.php
+/.env.*
+!/.env.example
+*.doc
+*.docx
+*.pdf
+*.xls
+*.xlsx
+*.sqlite
+*.sqlite-*
+/.phpunit.cache/
+/.phpunit.result.cache
+/public/build/
+/public/storage
+/public/hot
+/.migration-credentials*
+/.serena/cache/
+/.playwright-mcp/
+/.kombai/
+/project/assets/images/
+/public/assets/images/
+
+# Local state and environment variants must never enter public source snapshots.
+**/.env.*
+!**/.env.example
+!**/.env.production.example
+**/.migrations_verified
+*.zip
+*.7z
+*.tar
+*.gz
+*.dump
+*.bak
+*.backup
+*.pem
+*.key
+
+# Keep only deliberate HTTP protection files from otherwise private upload trees.
+/project/uploads/**
+!/project/uploads/.htaccess
+/project/HRMS/uploads/**
+!/project/HRMS/uploads/.htaccess
+!/project/HRMS/uploads/employee_documents/
+!/project/HRMS/uploads/employee_documents/.htaccess

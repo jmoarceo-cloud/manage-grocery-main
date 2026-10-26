@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-26",
+  "reference": "Original presentation extracted as text; no legacy bootstrap/configuration executed; nonce-verified synthetic products",
+  "reduced_motion": true,
+  "results": [
+    {
+      "viewport": "desktop",
+      "theme": "light",
+      "changed_pixels": 0,
+      "total_pixels": 1440000,
+      "ratio": 0
+    },
+    {
+      "viewport": "desktop",
+      "theme": "dark",
+      "changed_pixels": 0,
+      "total_pixels": 1440000,
+      "ratio": 0
+    },
+    {
+      "viewport": "mobile",
+      "theme": "light",
+      "changed_pixels": 0,
+      "total_pixels": 329160,
+      "ratio": 0
+    },
+    {
+      "viewport": "mobile",
+      "theme": "dark",
+      "changed_pixels": 0,
+      "total_pixels": 329160,
+      "ratio": 0
+    }
+  ]
+}

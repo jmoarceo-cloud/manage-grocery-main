@@ -1,0 +1,3 @@
+# AI tooling rules
+
+Apply to AGENTS/CLAUDE/GEMINI files, editor rules, skills, MCP configuration and AI setup documentation. Preserve the project's canonical scope and existing settings. Read [.ai/README.md](../README.md) and [MCP guide](../mcp/README.md). Add only task-relevant skills and tools; do not install broad packs by default. Never equate file presence with active tool availability. Keep secrets out of shared configuration. Remote documentation tools receive generic documentation questions only. Record syntax/discovery/connection checks separately from application tests. No automatic trust changes or command-approval bypasses.

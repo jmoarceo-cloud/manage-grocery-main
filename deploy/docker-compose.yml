@@ -1,0 +1,50 @@
+# vps-prod-01 deployment. Publishes NO host ports: the shared Caddy
+# (ruined-your-friendships stack) proxies manage-grocery.digitalapps.tech to
+# manage-grocery-web:80 over the external labada-edge network.
+#
+# Layout on the server (~/apps/manage-grocery):
+#   app/     project/ contents incl. app/.env and uploads/ (bind-mounted)
+#   deploy/  this directory; deploy/.env holds MARIADB_ROOT_PASSWORD
+name: manage-grocery
+
+services:
+  mg-web:
+    build: .
+    container_name: manage-grocery-web
+    restart: unless-stopped
+    depends_on:
+      mg-db:
+        condition: service_healthy
+    volumes:
+      - ../app:/var/www/html
+    networks:
+      - internal
+      - labada-edge
+    mem_limit: 512m
+
+  mg-db:
+    image: mariadb:10.11
+    container_name: manage-grocery-db
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:?set in deploy/.env}
+      TZ: Asia/Manila
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci"]
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - internal
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    mem_limit: 768m
+
+volumes:
+  db_data:
+
+networks:
+  internal:
+  labada-edge:
+    external: true

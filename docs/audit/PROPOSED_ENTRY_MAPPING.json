@@ -1,0 +1,1221 @@
+{
+    "status": "proposed only; not installed",
+    "date": "2026-10-26",
+    "entries": [
+        {
+            "source": "project/HRMS/admin_dashboard.php",
+            "stem": "admin_dashboard",
+            "domain": "Administration",
+            "route": "admin",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Administration/AdminDashboardController"
+        },
+        {
+            "source": "project/HRMS/admin_profile.php",
+            "stem": "admin_profile",
+            "domain": "Auth",
+            "route": "hrms/admin/profile",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/AdminProfileController"
+        },
+        {
+            "source": "project/HRMS/announcements.php",
+            "stem": "announcements",
+            "domain": "Workforce",
+            "route": "hrms/announcements",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Workforce/AnnouncementsController"
+        },
+        {
+            "source": "project/HRMS/applicant_document_download.php",
+            "stem": "applicant_document_download",
+            "domain": "Recruitment",
+            "route": "hrms/applicants/documents/download",
+            "response": "private response",
+            "method": "GET",
+            "controller": "Recruitment/ApplicantDocumentDownloadController"
+        },
+        {
+            "source": "project/HRMS/applicant_review.php",
+            "stem": "applicant_review",
+            "domain": "Recruitment",
+            "route": "hrms/applicants/review",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Recruitment/ApplicantReviewController"
+        },
+        {
+            "source": "project/HRMS/applicant_review_queue.php",
+            "stem": "applicant_review_queue",
+            "domain": "Recruitment",
+            "route": "hrms/applicants",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Recruitment/ApplicantReviewQueueController"
+        },
+        {
+            "source": "project/HRMS/apply.php",
+            "stem": "apply",
+            "domain": "Recruitment",
+            "route": "careers/apply",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Recruitment/ApplyController"
+        },
+        {
+            "source": "project/HRMS/attendance.php",
+            "stem": "attendance",
+            "domain": "Attendance",
+            "route": "hrms/attendance",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Attendance/AttendanceController"
+        },
+        {
+            "source": "project/HRMS/backfill_hired_documents.php",
+            "stem": "backfill_hired_documents",
+            "domain": "Operations",
+            "route": "CLI-only; no HTTP port",
+            "response": "CLI",
+            "method": "none",
+            "controller": "Console command (restricted)"
+        },
+        {
+            "source": "project/HRMS/change_password.php",
+            "stem": "change_password",
+            "domain": "Auth",
+            "route": "hrms/account/password",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/ChangePasswordController"
+        },
+        {
+            "source": "project/HRMS/check_session_status.php",
+            "stem": "check_session_status",
+            "domain": "Auth",
+            "route": "hrms/session/status",
+            "response": "JSON",
+            "method": "GET",
+            "controller": "Auth/CheckSessionStatusController"
+        },
+        {
+            "source": "project/HRMS/create_admin.php",
+            "stem": "create_admin",
+            "domain": "Operations",
+            "route": "CLI-only; no HTTP port",
+            "response": "CLI",
+            "method": "none",
+            "controller": "Console command (restricted)"
+        },
+        {
+            "source": "project/HRMS/employee_dashboard.php",
+            "stem": "employee_dashboard",
+            "domain": "Workforce",
+            "route": "hrms/employee",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Workforce/EmployeeDashboardController"
+        },
+        {
+            "source": "project/HRMS/employee_document_download.php",
+            "stem": "employee_document_download",
+            "domain": "Workforce",
+            "route": "hrms/employees/documents/download",
+            "response": "private response",
+            "method": "GET",
+            "controller": "Workforce/EmployeeDocumentDownloadController"
+        },
+        {
+            "source": "project/HRMS/employee_documents.php",
+            "stem": "employee_documents",
+            "domain": "Workforce",
+            "route": "hrms/employees/documents",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Workforce/EmployeeDocumentsController"
+        },
+        {
+            "source": "project/HRMS/employee_schedule.php",
+            "stem": "employee_schedule",
+            "domain": "Attendance",
+            "route": "hrms/employee/schedule",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Attendance/EmployeeScheduleController"
+        },
+        {
+            "source": "project/HRMS/employees.php",
+            "stem": "employees",
+            "domain": "Workforce",
+            "route": "hrms/employees",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Workforce/EmployeesController"
+        },
+        {
+            "source": "project/HRMS/generate_discount_code.php",
+            "stem": "generate_discount_code",
+            "domain": "Discounts",
+            "route": "hrms/discount-approvals",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Discounts/GenerateDiscountCodeController"
+        },
+        {
+            "source": "project/HRMS/hr_dashboard.php",
+            "stem": "hr_dashboard",
+            "domain": "Workforce",
+            "route": "hrms/hr",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Workforce/HrDashboardController"
+        },
+        {
+            "source": "project/HRMS/hr_letter_download.php",
+            "stem": "hr_letter_download",
+            "domain": "Letters",
+            "route": "hrms/letters/download",
+            "response": "private response",
+            "method": "GET",
+            "controller": "Letters/HrLetterDownloadController"
+        },
+        {
+            "source": "project/HRMS/hr_letter_edit.php",
+            "stem": "hr_letter_edit",
+            "domain": "Letters",
+            "route": "hrms/letters/edit",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Letters/HrLetterEditController"
+        },
+        {
+            "source": "project/HRMS/hr_letter_print.php",
+            "stem": "hr_letter_print",
+            "domain": "Letters",
+            "route": "hrms/letters/print",
+            "response": "print/PDF",
+            "method": "GET",
+            "controller": "Letters/HrLetterPrintController"
+        },
+        {
+            "source": "project/HRMS/hr_letter_reminders.php",
+            "stem": "hr_letter_reminders",
+            "domain": "Letters",
+            "route": "hrms/letters/reminders",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Letters/HrLetterRemindersController"
+        },
+        {
+            "source": "project/HRMS/hr_letter_signed.php",
+            "stem": "hr_letter_signed",
+            "domain": "Letters",
+            "route": "hrms/letters/signed",
+            "response": "private response",
+            "method": "GET + validated POST actions",
+            "controller": "Letters/HrLetterSignedController"
+        },
+        {
+            "source": "project/HRMS/hr_letter_templates.php",
+            "stem": "hr_letter_templates",
+            "domain": "Letters",
+            "route": "hrms/letters/templates",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Letters/HrLetterTemplatesController"
+        },
+        {
+            "source": "project/HRMS/hr_letters.php",
+            "stem": "hr_letters",
+            "domain": "Letters",
+            "route": "hrms/letters",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Letters/HrLettersController"
+        },
+        {
+            "source": "project/HRMS/hr_manager_dashboard.php",
+            "stem": "hr_manager_dashboard",
+            "domain": "Workforce",
+            "route": "hrms/manager",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Workforce/HrManagerDashboardController"
+        },
+        {
+            "source": "project/HRMS/hr_notifications.php",
+            "stem": "hr_notifications",
+            "domain": "Notifications",
+            "route": "hrms/notifications",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Notifications/HrNotificationsController"
+        },
+        {
+            "source": "project/HRMS/hr_reports.php",
+            "stem": "hr_reports",
+            "domain": "Reports",
+            "route": "hrms/reports",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Reports/HrReportsController"
+        },
+        {
+            "source": "project/HRMS/index.php",
+            "stem": "index",
+            "domain": "Auth",
+            "route": "hrms",
+            "response": "redirect",
+            "method": "GET",
+            "controller": "Auth/IndexController"
+        },
+        {
+            "source": "project/HRMS/late_timein_requests.php",
+            "stem": "late_timein_requests",
+            "domain": "Attendance",
+            "route": "hrms/attendance/late-requests",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Attendance/LateTimeinRequestsController"
+        },
+        {
+            "source": "project/HRMS/letter_recipient.php",
+            "stem": "letter_recipient",
+            "domain": "Letters",
+            "route": "letters/respond",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Letters/LetterRecipientController"
+        },
+        {
+            "source": "project/HRMS/login.php",
+            "stem": "login",
+            "domain": "Auth",
+            "route": "hrms/login",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/LoginController"
+        },
+        {
+            "source": "project/HRMS/logout.php",
+            "stem": "logout",
+            "domain": "Auth",
+            "route": "hrms/logout",
+            "response": "redirect",
+            "method": "POST",
+            "controller": "Auth/LogoutController"
+        },
+        {
+            "source": "project/HRMS/manage_application_form.php",
+            "stem": "manage_application_form",
+            "domain": "Recruitment",
+            "route": "hrms/application-form",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Recruitment/ManageApplicationFormController"
+        },
+        {
+            "source": "project/HRMS/manage_supervisor_teams.php",
+            "stem": "manage_supervisor_teams",
+            "domain": "Supervisor",
+            "route": "hrms/supervisor-teams",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Supervisor/ManageSupervisorTeamsController"
+        },
+        {
+            "source": "project/HRMS/my_profile.php",
+            "stem": "my_profile",
+            "domain": "Auth",
+            "route": "hrms/account/profile",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/MyProfileController"
+        },
+        {
+            "source": "project/HRMS/password_reset_requests.php",
+            "stem": "password_reset_requests",
+            "domain": "Administration",
+            "route": "admin/password-reset-requests",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Administration/PasswordResetRequestsController"
+        },
+        {
+            "source": "project/HRMS/payroll/accountant.php",
+            "stem": "accountant",
+            "domain": "Payroll",
+            "route": "hrms/payroll/accountant",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Payroll/AccountantController"
+        },
+        {
+            "source": "project/HRMS/payroll/approve_record.php",
+            "stem": "approve_record",
+            "domain": "Payroll",
+            "route": "hrms/payroll/decision",
+            "response": "JSON/redirect",
+            "method": "POST",
+            "controller": "Payroll/ApproveRecordController"
+        },
+        {
+            "source": "project/HRMS/payroll/attendance.php",
+            "stem": "attendance",
+            "domain": "Payroll",
+            "route": "hrms/payroll/attendance",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Payroll/AttendanceController"
+        },
+        {
+            "source": "project/HRMS/payroll/capital_transaction.php",
+            "stem": "capital_transaction",
+            "domain": "Finance",
+            "route": "finance/payroll-funding",
+            "response": "JSON/redirect",
+            "method": "POST",
+            "controller": "Finance/CapitalTransactionController"
+        },
+        {
+            "source": "project/HRMS/payroll/cash_ack_download.php",
+            "stem": "cash_ack_download",
+            "domain": "Payroll",
+            "route": "hrms/payroll/cash-acknowledgement",
+            "response": "private response",
+            "method": "GET",
+            "controller": "Payroll/CashAckDownloadController"
+        },
+        {
+            "source": "project/HRMS/payroll/employees.php",
+            "stem": "employees",
+            "domain": "Payroll",
+            "route": "hrms/payroll/employees",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Payroll/EmployeesController"
+        },
+        {
+            "source": "project/HRMS/payroll/get_employee_payslips.php",
+            "stem": "get_employee_payslips",
+            "domain": "Payroll",
+            "route": "api/hrms/payroll/employee-payslips",
+            "response": "JSON",
+            "method": "GET",
+            "controller": "Payroll/GetEmployeePayslipsController"
+        },
+        {
+            "source": "project/HRMS/payroll/history.php",
+            "stem": "history",
+            "domain": "Payroll",
+            "route": "hrms/payroll/history",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Payroll/HistoryController"
+        },
+        {
+            "source": "project/HRMS/payroll/payroll.php",
+            "stem": "payroll",
+            "domain": "Payroll",
+            "route": "hrms/payroll",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Payroll/PayrollController"
+        },
+        {
+            "source": "project/HRMS/payroll/payslip_lookup.php",
+            "stem": "payslip_lookup",
+            "domain": "Payroll",
+            "route": "hrms/payroll/payslip",
+            "response": "private response",
+            "method": "GET",
+            "controller": "Payroll/PayslipLookupController"
+        },
+        {
+            "source": "project/HRMS/payroll/save_record.php",
+            "stem": "save_record",
+            "domain": "Payroll",
+            "route": "hrms/payroll/records",
+            "response": "JSON/redirect",
+            "method": "POST",
+            "controller": "Payroll/SaveRecordController"
+        },
+        {
+            "source": "project/HRMS/payroll/submit_for_approval.php",
+            "stem": "submit_for_approval",
+            "domain": "Payroll",
+            "route": "hrms/payroll/submit",
+            "response": "JSON/redirect",
+            "method": "POST",
+            "controller": "Payroll/SubmitForApprovalController"
+        },
+        {
+            "source": "project/HRMS/payroll/thirteenth.php",
+            "stem": "thirteenth",
+            "domain": "Payroll",
+            "route": "hrms/payroll/thirteenth-month",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Payroll/ThirteenthController"
+        },
+        {
+            "source": "project/HRMS/payroll/upload_cash_ack.php",
+            "stem": "upload_cash_ack",
+            "domain": "Payroll",
+            "route": "hrms/payroll/cash-acknowledgement",
+            "response": "JSON/redirect",
+            "method": "POST",
+            "controller": "Payroll/UploadCashAckController"
+        },
+        {
+            "source": "project/HRMS/payroll/workflow.php",
+            "stem": "workflow",
+            "domain": "Payroll",
+            "route": "service only; no HTTP route",
+            "response": "service",
+            "method": "none",
+            "controller": "Services/PayrollWorkflow"
+        },
+        {
+            "source": "project/HRMS/payslip.php",
+            "stem": "payslip",
+            "domain": "Payroll",
+            "route": "hrms/account/payslips",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Payroll/PayslipController"
+        },
+        {
+            "source": "project/HRMS/ph_location_lookup.php",
+            "stem": "ph_location_lookup",
+            "domain": "Recruitment",
+            "route": "api/locations",
+            "response": "JSON",
+            "method": "GET",
+            "controller": "Recruitment/PhLocationLookupController"
+        },
+        {
+            "source": "project/HRMS/privacy_request.php",
+            "stem": "privacy_request",
+            "domain": "Privacy",
+            "route": "privacy/request",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Privacy/PrivacyRequestController"
+        },
+        {
+            "source": "project/HRMS/privacy_requests.php",
+            "stem": "privacy_requests",
+            "domain": "Privacy",
+            "route": "admin/privacy-requests",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Privacy/PrivacyRequestsController"
+        },
+        {
+            "source": "project/HRMS/privacy_response_download.php",
+            "stem": "privacy_response_download",
+            "domain": "Privacy",
+            "route": "privacy/response",
+            "response": "private response",
+            "method": "GET",
+            "controller": "Privacy/PrivacyResponseDownloadController"
+        },
+        {
+            "source": "project/HRMS/purchase_orders.php",
+            "stem": "purchase_orders",
+            "domain": "Procurement",
+            "route": "hrms/purchase-orders",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Procurement/PurchaseOrdersController"
+        },
+        {
+            "source": "project/HRMS/requirements_submit.php",
+            "stem": "requirements_submit",
+            "domain": "Recruitment",
+            "route": "careers/requirements",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Recruitment/RequirementsSubmitController"
+        },
+        {
+            "source": "project/HRMS/reset_password.php",
+            "stem": "reset_password",
+            "domain": "Administration",
+            "route": "admin/users/password",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Administration/ResetPasswordController"
+        },
+        {
+            "source": "project/HRMS/resume_download.php",
+            "stem": "resume_download",
+            "domain": "Recruitment",
+            "route": "hrms/applicants/resume",
+            "response": "private response",
+            "method": "GET",
+            "controller": "Recruitment/ResumeDownloadController"
+        },
+        {
+            "source": "project/HRMS/setup_2fa.php",
+            "stem": "setup_2fa",
+            "domain": "Auth",
+            "route": "hrms/account/two-factor/setup",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/Setup2faController"
+        },
+        {
+            "source": "project/HRMS/supervisor_attendance.php",
+            "stem": "supervisor_attendance",
+            "domain": "Supervisor",
+            "route": "supervisor/attendance",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Supervisor/SupervisorAttendanceController"
+        },
+        {
+            "source": "project/HRMS/supervisor_catalog_security.php",
+            "stem": "supervisor_catalog_security",
+            "domain": "Supervisor",
+            "route": "supervisor/catalog-access",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Supervisor/SupervisorCatalogSecurityController"
+        },
+        {
+            "source": "project/HRMS/supervisor_dashboard.php",
+            "stem": "supervisor_dashboard",
+            "domain": "Supervisor",
+            "route": "supervisor",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Supervisor/SupervisorDashboardController"
+        },
+        {
+            "source": "project/HRMS/supervisor_inventory.php",
+            "stem": "supervisor_inventory",
+            "domain": "Supervisor",
+            "route": "supervisor/inventory",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Supervisor/SupervisorInventoryController"
+        },
+        {
+            "source": "project/HRMS/supervisor_late_timein.php",
+            "stem": "supervisor_late_timein",
+            "domain": "Supervisor",
+            "route": "supervisor/late-time-in",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Supervisor/SupervisorLateTimeinController"
+        },
+        {
+            "source": "project/HRMS/supervisor_leave.php",
+            "stem": "supervisor_leave",
+            "domain": "Supervisor",
+            "route": "supervisor/leave",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Supervisor/SupervisorLeaveController"
+        },
+        {
+            "source": "project/HRMS/supervisor_official_business.php",
+            "stem": "supervisor_official_business",
+            "domain": "Supervisor",
+            "route": "supervisor/official-business",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Supervisor/SupervisorOfficialBusinessController"
+        },
+        {
+            "source": "project/HRMS/supervisor_overtime.php",
+            "stem": "supervisor_overtime",
+            "domain": "Supervisor",
+            "route": "supervisor/overtime",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Supervisor/SupervisorOvertimeController"
+        },
+        {
+            "source": "project/HRMS/supervisor_performance.php",
+            "stem": "supervisor_performance",
+            "domain": "Supervisor",
+            "route": "supervisor/performance",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Supervisor/SupervisorPerformanceController"
+        },
+        {
+            "source": "project/HRMS/supervisor_pos_monitor.php",
+            "stem": "supervisor_pos_monitor",
+            "domain": "Supervisor",
+            "route": "supervisor/pos",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Supervisor/SupervisorPosMonitorController"
+        },
+        {
+            "source": "project/HRMS/supervisor_purchase_orders.php",
+            "stem": "supervisor_purchase_orders",
+            "domain": "Supervisor",
+            "route": "supervisor/purchase-orders",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Supervisor/SupervisorPurchaseOrdersController"
+        },
+        {
+            "source": "project/HRMS/supervisor_reports.php",
+            "stem": "supervisor_reports",
+            "domain": "Supervisor",
+            "route": "supervisor/reports",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Supervisor/SupervisorReportsController"
+        },
+        {
+            "source": "project/HRMS/supervisor_schedule.php",
+            "stem": "supervisor_schedule",
+            "domain": "Supervisor",
+            "route": "supervisor/schedule",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Supervisor/SupervisorScheduleController"
+        },
+        {
+            "source": "project/HRMS/verify_2fa.php",
+            "stem": "verify_2fa",
+            "domain": "Auth",
+            "route": "hrms/two-factor/verify",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/Verify2faController"
+        },
+        {
+            "source": "project/accounts_payable.php",
+            "stem": "accounts_payable",
+            "domain": "Finance",
+            "route": "finance/payables",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Finance/AccountsPayableController"
+        },
+        {
+            "source": "project/ai_product_ingest.php",
+            "stem": "ai_product_ingest",
+            "domain": "Inventory",
+            "route": "api/inventory/nutrition-ingest",
+            "response": "JSON",
+            "method": "GET + validated POST actions",
+            "controller": "Inventory/AiProductIngestController"
+        },
+        {
+            "source": "project/ai_settings.php",
+            "stem": "ai_settings",
+            "domain": "Inventory",
+            "route": "inventory/ai-settings",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Inventory/AiSettingsController"
+        },
+        {
+            "source": "project/announcements.php",
+            "stem": "announcements",
+            "domain": "Workforce",
+            "route": "announcements",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Workforce/AnnouncementsController"
+        },
+        {
+            "source": "project/budgeting.php",
+            "stem": "budgeting",
+            "domain": "Finance",
+            "route": "finance/budgets",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Finance/BudgetingController"
+        },
+        {
+            "source": "project/catalog.php",
+            "stem": "catalog",
+            "domain": "PublicSite",
+            "route": "catalog",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "PublicSite/CatalogController"
+        },
+        {
+            "source": "project/catalog_supervisor_login.php",
+            "stem": "catalog_supervisor_login",
+            "domain": "PublicSite",
+            "route": "catalog/unlock",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "PublicSite/CatalogSupervisorLoginController"
+        },
+        {
+            "source": "project/change_password.php",
+            "stem": "change_password",
+            "domain": "Auth",
+            "route": "account/password",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/ChangePasswordController"
+        },
+        {
+            "source": "project/dashboard.php",
+            "stem": "dashboard",
+            "domain": "Dashboard",
+            "route": "dashboard",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Dashboard/DashboardController"
+        },
+        {
+            "source": "project/expense_categories.php",
+            "stem": "expense_categories",
+            "domain": "Finance",
+            "route": "finance/expense-categories",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Finance/ExpenseCategoriesController"
+        },
+        {
+            "source": "project/finance.php",
+            "stem": "finance",
+            "domain": "Finance",
+            "route": "finance/capital",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Finance/FinanceController"
+        },
+        {
+            "source": "project/finance_dashboard.php",
+            "stem": "finance_dashboard",
+            "domain": "Finance",
+            "route": "finance",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Finance/FinanceDashboardController"
+        },
+        {
+            "source": "project/financial_analysis.php",
+            "stem": "financial_analysis",
+            "domain": "Finance",
+            "route": "finance/analysis",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Finance/FinancialAnalysisController"
+        },
+        {
+            "source": "project/financial_audit_log.php",
+            "stem": "financial_audit_log",
+            "domain": "Finance",
+            "route": "finance/audit",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Finance/FinancialAuditLogController"
+        },
+        {
+            "source": "project/financial_statements.php",
+            "stem": "financial_statements",
+            "domain": "Finance",
+            "route": "finance/statements",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Finance/FinancialStatementsController"
+        },
+        {
+            "source": "project/index.php",
+            "stem": "index",
+            "domain": "PublicSite",
+            "route": "/",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "PublicSite/IndexController"
+        },
+        {
+            "source": "project/inventory.php",
+            "stem": "inventory",
+            "domain": "Inventory",
+            "route": "inventory",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Inventory/InventoryController"
+        },
+        {
+            "source": "project/inventory_dashboard.php",
+            "stem": "inventory_dashboard",
+            "domain": "Inventory",
+            "route": "inventory/dashboard",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Inventory/InventoryDashboardController"
+        },
+        {
+            "source": "project/inventory_reports.php",
+            "stem": "inventory_reports",
+            "domain": "Inventory",
+            "route": "inventory/reports",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Inventory/InventoryReportsController"
+        },
+        {
+            "source": "project/inventory_requests.php",
+            "stem": "inventory_requests",
+            "domain": "Procurement",
+            "route": "inventory/requests",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Procurement/InventoryRequestsController"
+        },
+        {
+            "source": "project/kiosk.php",
+            "stem": "kiosk",
+            "domain": "PublicSite",
+            "route": "kiosk",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "PublicSite/KioskController"
+        },
+        {
+            "source": "project/label_photo.php",
+            "stem": "label_photo",
+            "domain": "Inventory",
+            "route": "inventory/label-photo",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Inventory/LabelPhotoController"
+        },
+        {
+            "source": "project/login.php",
+            "stem": "login",
+            "domain": "Auth",
+            "route": "login",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/LoginController"
+        },
+        {
+            "source": "project/logout.php",
+            "stem": "logout",
+            "domain": "Auth",
+            "route": "logout",
+            "response": "redirect",
+            "method": "POST",
+            "controller": "Auth/LogoutController"
+        },
+        {
+            "source": "project/my_profile.php",
+            "stem": "my_profile",
+            "domain": "Auth",
+            "route": "account/profile",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/MyProfileController"
+        },
+        {
+            "source": "project/notifications.php",
+            "stem": "notifications",
+            "domain": "Notifications",
+            "route": "notifications",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Notifications/NotificationsController"
+        },
+        {
+            "source": "project/nutrition_compare.php",
+            "stem": "nutrition_compare",
+            "domain": "PublicSite",
+            "route": "catalog/compare",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "PublicSite/NutritionCompareController"
+        },
+        {
+            "source": "project/operating_expenses.php",
+            "stem": "operating_expenses",
+            "domain": "Finance",
+            "route": "finance/expenses",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Finance/OperatingExpensesController"
+        },
+        {
+            "source": "project/password_reset.php",
+            "stem": "password_reset",
+            "domain": "Auth",
+            "route": "password/reset",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/PasswordResetController"
+        },
+        {
+            "source": "project/password_reset_request.php",
+            "stem": "password_reset_request",
+            "domain": "Auth",
+            "route": "password/request",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/PasswordResetRequestController"
+        },
+        {
+            "source": "project/payslip_view.php",
+            "stem": "payslip_view",
+            "domain": "Payroll",
+            "route": "account/payslips/view",
+            "response": "private response",
+            "method": "GET",
+            "controller": "Payroll/PayslipViewController"
+        },
+        {
+            "source": "project/pos.php",
+            "stem": "pos",
+            "domain": "Pos",
+            "route": "pos",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Pos/PosController"
+        },
+        {
+            "source": "project/procurement_letter.php",
+            "stem": "procurement_letter",
+            "domain": "Procurement",
+            "route": "procurement/letters/preview",
+            "response": "print/PDF",
+            "method": "GET",
+            "controller": "Procurement/ProcurementLetterController"
+        },
+        {
+            "source": "project/procurement_signature_enrollment.php",
+            "stem": "procurement_signature_enrollment",
+            "domain": "Procurement",
+            "route": "procurement/signature",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Procurement/ProcurementSignatureEnrollmentController"
+        },
+        {
+            "source": "project/product_ai_review.php",
+            "stem": "product_ai_review",
+            "domain": "Inventory",
+            "route": "products/nutrition/review",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Inventory/ProductAiReviewController"
+        },
+        {
+            "source": "project/product_barcode_labels.php",
+            "stem": "product_barcode_labels",
+            "domain": "Inventory",
+            "route": "products/barcode-labels",
+            "response": "print",
+            "method": "GET",
+            "controller": "Inventory/ProductBarcodeLabelsController"
+        },
+        {
+            "source": "project/product_barcode_lookup.php",
+            "stem": "product_barcode_lookup",
+            "domain": "Inventory",
+            "route": "api/products/barcode",
+            "response": "JSON",
+            "method": "GET",
+            "controller": "Inventory/ProductBarcodeLookupController"
+        },
+        {
+            "source": "project/product_batches.php",
+            "stem": "product_batches",
+            "domain": "Inventory",
+            "route": "inventory/batches",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Inventory/ProductBatchesController"
+        },
+        {
+            "source": "project/product_detail.php",
+            "stem": "product_detail",
+            "domain": "PublicSite",
+            "route": "catalog/product",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "PublicSite/ProductDetailController"
+        },
+        {
+            "source": "project/product_details_edit.php",
+            "stem": "product_details_edit",
+            "domain": "Inventory",
+            "route": "products/details/edit",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Inventory/ProductDetailsEditController"
+        },
+        {
+            "source": "project/products.php",
+            "stem": "products",
+            "domain": "Inventory",
+            "route": "products",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Inventory/ProductsController"
+        },
+        {
+            "source": "project/purchase_order_letter.php",
+            "stem": "purchase_order_letter",
+            "domain": "Procurement",
+            "route": "procurement/purchase-orders/letter",
+            "response": "print/PDF",
+            "method": "GET",
+            "controller": "Procurement/PurchaseOrderLetterController"
+        },
+        {
+            "source": "project/purchase_order_receipt.php",
+            "stem": "purchase_order_receipt",
+            "domain": "Procurement",
+            "route": "procurement/purchase-orders/receipts",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Procurement/PurchaseOrderReceiptController"
+        },
+        {
+            "source": "project/purchase_orders.php",
+            "stem": "purchase_orders",
+            "domain": "Procurement",
+            "route": "procurement/purchase-orders",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Procurement/PurchaseOrdersController"
+        },
+        {
+            "source": "project/reports.php",
+            "stem": "reports",
+            "domain": "Reports",
+            "route": "reports",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Reports/ReportsController"
+        },
+        {
+            "source": "project/scan.php",
+            "stem": "scan",
+            "domain": "PublicSite",
+            "route": "catalog/scan",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "PublicSite/ScanController"
+        },
+        {
+            "source": "project/scan_insights.php",
+            "stem": "scan_insights",
+            "domain": "Inventory",
+            "route": "inventory/scan-insights",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Inventory/ScanInsightsController"
+        },
+        {
+            "source": "project/scanner.php",
+            "stem": "scanner",
+            "domain": "Pos",
+            "route": "scanner",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Pos/ScannerController"
+        },
+        {
+            "source": "project/setup_2fa.php",
+            "stem": "setup_2fa",
+            "domain": "Auth",
+            "route": "account/two-factor/setup",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/Setup2faController"
+        },
+        {
+            "source": "project/shelf_labels.php",
+            "stem": "shelf_labels",
+            "domain": "Inventory",
+            "route": "products/shelf-labels",
+            "response": "print",
+            "method": "GET + validated POST actions",
+            "controller": "Inventory/ShelfLabelsController"
+        },
+        {
+            "source": "project/shift_report.php",
+            "stem": "shift_report",
+            "domain": "Reports",
+            "route": "reports/shifts",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Reports/ShiftReportController"
+        },
+        {
+            "source": "project/signature_image.php",
+            "stem": "signature_image",
+            "domain": "Procurement",
+            "route": "procurement/signatures/image",
+            "response": "private response",
+            "method": "GET",
+            "controller": "Procurement/SignatureImageController"
+        },
+        {
+            "source": "project/stock_recommendations.php",
+            "stem": "stock_recommendations",
+            "domain": "Inventory",
+            "route": "inventory/recommendations",
+            "response": "Blade",
+            "method": "GET",
+            "controller": "Inventory/StockRecommendationsController"
+        },
+        {
+            "source": "project/supplier_inventory_approval.php",
+            "stem": "supplier_inventory_approval",
+            "domain": "SupplierPortal",
+            "route": "supplier/inventory-approval",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "SupplierPortal/SupplierInventoryApprovalController"
+        },
+        {
+            "source": "project/supplier_purchase_order_approval.php",
+            "stem": "supplier_purchase_order_approval",
+            "domain": "SupplierPortal",
+            "route": "supplier/purchase-order-approval",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "SupplierPortal/SupplierPurchaseOrderApprovalController"
+        },
+        {
+            "source": "project/suppliers.php",
+            "stem": "suppliers",
+            "domain": "Procurement",
+            "route": "suppliers",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Procurement/SuppliersController"
+        },
+        {
+            "source": "project/vendor_ratings.php",
+            "stem": "vendor_ratings",
+            "domain": "Procurement",
+            "route": "suppliers/ratings",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Procurement/VendorRatingsController"
+        },
+        {
+            "source": "project/verify_2fa.php",
+            "stem": "verify_2fa",
+            "domain": "Auth",
+            "route": "two-factor/verify",
+            "response": "Blade",
+            "method": "GET + validated POST actions",
+            "controller": "Auth/Verify2faController"
+        }
+    ]
+}

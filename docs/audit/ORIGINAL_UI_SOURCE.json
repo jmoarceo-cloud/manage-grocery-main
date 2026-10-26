@@ -1,0 +1,45 @@
+{
+    "date": "2026-10-26",
+    "purpose": "Original home, login, public catalog, product detail and nutrition comparison UI port: source read as text; no PHP configuration or original bootstrap executed.",
+    "sources": {
+        "project/index.php": "94f4b74ae49874556370831cdd12397cb6c4914971609eb44451098515f8bd0f",
+        "project/assets/css/theme.css": "23439308fd6f5eda508c04f1034c53dad9b2a64ce6de391b64aa87a6c592f73f",
+        "project/assets/css/landing.css": "d801bbd633dfbed78752d2417b2780ea4ecc971ee9e0093ab6acd3daa21c53db",
+        "project/login.php": "e0351b30777dd6595993d5688020a3ad0755e54ccaeb41dd46f7b48dbf87145b",
+        "project/theme-toggle.css": "a6079a7f21534706ff6a92213491bc95041d1fcaaab32bfefece47914c7f9e21",
+        "project/theme-sync.js": "ee3b6b45b1020e57671df7c58c9194e81438b4fda2b2cc2ce8a497c43834e5d6",
+        "project/catalog.php": "197619740f92f01a4bd38b741ef4dbbf20d46551a87d619106ac0f1ba5ac6a7a",
+        "project/assets/css/page-controls.css": "73243f8cdb5ac792ce33283f163530751cef60b73e696924d5df915df2fed9f3",
+        "project/includes/public_theme.php": "4f8f1b69a828911fcb4302a7cd7114c7b5b2591bdc9525c3dc8b6d17f923f42f",
+        "project/product_detail.php": "fd9ed808a01e13c6df50412271b04ee4bd249931f3ffc0329dbf541f92693080",
+        "project/nutrition_compare.php": "9dfea13a3614ce8f171567a6171365b1a6ee262c78ad6f7053545feabd1ae762",
+        "project/verify_2fa.php": "f32f4304a26e772a65552278ada0beaaf893b86272002b06beb51419a9a171d0",
+        "project/HRMS/verify_2fa.php": "9efc32955c0adde525c8642b6ef720ebf6429e11c4e13b133a64485d9c0019a8"
+    },
+    "copied_css_identical": true,
+    "login_inline_css_sha256": "2d05baf99de7e8e602f61d8fa7d5efe9ea5a8b9a045e942873ffc434d2bc8521",
+    "copied_login_css_identical": true,
+    "copied_theme_sync_identical": true,
+    "catalog_inline_css_sha256": "2017eb51c7ec1b639cdb897e88e7f3c59455aa11d0424f8b9faf6ab5c586ffcb",
+    "copied_catalog_css_identical": true,
+    "product_inline_css_sha256": "6ccfa0b223102cbd63e3e063fc59065f3daa4aeaa90647c3aa28a1acd1013341",
+    "ported_product_css_sha256": "6bbd6e996f7f36584135e8168860329463aa9fc6c5e5896935dc600dadfcecef",
+    "product_css_mapping": "One per-product PHP stock color becomes the original-stock-color CSS custom property; remaining source CSS unchanged.",
+    "compare_inline_css_sha256": "0af56fd63f6e36812faf49297457239d1efc91b2de5e0505c3ab0c950bfd066a",
+    "copied_compare_css_identical": true,
+    "comparison_mapping": "Original markup/CSS/minimum-value cell styling; native verified/basis/serving guards, current selection and numeric ids[] retained. Original comparison does not load web fonts.",
+    "mfa_pos_css_sha256": [
+        "71da0a9e513476d55ec947572b2165de83946d33584853c242e4f2a1eea55dfc"
+    ],
+    "mfa_hrms_css_sha256": [
+        "12d3f7c2a5dc8a3e3a81328207f7bc89787e0f7f70961e9c9d944182693d2c9d",
+        "c36ec1d395c528977ead7dda7dcb045054b11dbfa6e5d36df0ce748a441afdb9"
+    ],
+    "local_font_sources": {
+        "inter/Inter-Variable.ttf": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+        "inter/OFL.txt": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+        "sora/Sora-Variable.ttf": "84ff7096ae3ec6c8be47d906d1a0ba4de7f2ce78c615275c77301964a316e16c",
+        "sora/OFL.txt": "ba0b9729c9428ba79a0459ab8ec575791b51509dbec213e383d0316d37fec299"
+    },
+    "mfa_mapping": "Original POS and HR verification UI; native OTP/recovery/resend/logout endpoints and transport retry; first enrollment/recovery display remain pending."
+}

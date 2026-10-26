@@ -1,0 +1,561 @@
+{
+    "date": "2026-10-26",
+    "method": "In-place baseline validation and additive Laravel migration; no business-table import/recreation",
+    "framework_migration_exit": 0,
+    "original_backup_hash_matches": true,
+    "original_tables_compared": 77,
+    "all_original_table_counts_unchanged": true,
+    "original_rows": 8631,
+    "added_pos_tables": [
+        "migrations",
+        "laravel_checkout_requests",
+        "application_audit_events"
+    ],
+    "legacy_principal_access_repaired": [
+        "DB_USERNAME",
+        "BACKUP_DB_USERNAME",
+        "PUBLIC_DB_USERNAME"
+    ],
+    "row_counts": [
+        {
+            "database": "grocery_pos",
+            "table": "accounts_payable",
+            "before": 11,
+            "after": 11,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "ai_cache",
+            "before": 14,
+            "after": 14,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "ai_ingest_product_cooldowns",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "ai_ingest_rate_limits",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "ai_settings",
+            "before": 1,
+            "after": 1,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "ai_usage_log",
+            "before": 54,
+            "after": 54,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "announcement_reads",
+            "before": 1,
+            "after": 1,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "budgets",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "capital_transactions",
+            "before": 5,
+            "after": 5,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "cashier_lane_schedule",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "categories",
+            "before": 10,
+            "after": 10,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "discount_requests",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "expense_categories",
+            "before": 2,
+            "after": 2,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "export_log",
+            "before": 21,
+            "after": 21,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "inventory_requests",
+            "before": 28,
+            "after": 28,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "login_ip_throttle",
+            "before": 35,
+            "after": 35,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "notifications",
+            "before": 422,
+            "after": 422,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "operating_expenses",
+            "before": 3,
+            "after": 3,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "password_reset_requests",
+            "before": 14,
+            "after": 14,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "pos_lanes",
+            "before": 3,
+            "after": 3,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "product_batches",
+            "before": 140,
+            "after": 140,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "product_detail_audit",
+            "before": 445,
+            "after": 445,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "product_details",
+            "before": 89,
+            "after": 89,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "product_discount_requests",
+            "before": 4,
+            "after": 4,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "product_scan_events",
+            "before": 319,
+            "after": 319,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "products",
+            "before": 91,
+            "after": 91,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "purchase_order_items",
+            "before": 10,
+            "after": 10,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "purchase_order_receipt_items",
+            "before": 2,
+            "after": 2,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "purchase_order_receipts",
+            "before": 2,
+            "after": 2,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "purchase_orders",
+            "before": 9,
+            "after": 9,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "queue_tickets",
+            "before": 1,
+            "after": 1,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "rate_limit_public",
+            "before": 1,
+            "after": 1,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "sale_batch_consumption",
+            "before": 78,
+            "after": 78,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "sale_refunds",
+            "before": 10,
+            "after": 10,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "sales",
+            "before": 76,
+            "after": 76,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "sales_details",
+            "before": 292,
+            "after": 292,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "stock_logs",
+            "before": 567,
+            "after": 567,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "store_settings",
+            "before": 1,
+            "after": 1,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "supplier_payments",
+            "before": 8,
+            "after": 8,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "suppliers",
+            "before": 23,
+            "after": 23,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "users",
+            "before": 17,
+            "after": 17,
+            "unchanged": true
+        },
+        {
+            "database": "grocery_pos",
+            "table": "vendor_ratings",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "announcements",
+            "before": 1,
+            "after": 1,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "app_settings",
+            "before": 1,
+            "after": 1,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "applicant_documents",
+            "before": 110,
+            "after": 110,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "application_form_fields",
+            "before": 3,
+            "after": 3,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "attendance",
+            "before": 2090,
+            "after": 2090,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "data_subject_requests",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "discount_approval_codes",
+            "before": 2,
+            "after": 2,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "employee_documents",
+            "before": 143,
+            "after": 143,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "employee_status_logs",
+            "before": 7,
+            "after": 7,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "employee_weekly_shifts",
+            "before": 112,
+            "after": 112,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "employees",
+            "before": 16,
+            "after": 16,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "holidays",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "hr_audit_log",
+            "before": 1,
+            "after": 1,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "hr_letter_email_log",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "hr_letter_events",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "hr_letter_reminders",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "hr_letter_templates",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "hr_letters",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "job_applicant_logs",
+            "before": 190,
+            "after": 190,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "job_applicants",
+            "before": 27,
+            "after": 27,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "late_timein_requests",
+            "before": 14,
+            "after": 14,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "leave_credits",
+            "before": 45,
+            "after": 45,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "leave_request_logs",
+            "before": 10,
+            "after": 10,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "leave_requests",
+            "before": 11,
+            "after": 11,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "login_ip_throttle",
+            "before": 34,
+            "after": 34,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "official_business_requests",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "overtime_requests",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "payroll_logs",
+            "before": 2824,
+            "after": 2824,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "payroll_records",
+            "before": 132,
+            "after": 132,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "performance_records",
+            "before": 2,
+            "after": 2,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "position_history",
+            "before": 16,
+            "after": 16,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "shift_swaps",
+            "before": 0,
+            "after": 0,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "shifts",
+            "before": 4,
+            "after": 4,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "supervisor_teams",
+            "before": 10,
+            "after": 10,
+            "unchanged": true
+        },
+        {
+            "database": "hrms",
+            "table": "users",
+            "before": 17,
+            "after": 17,
+            "unchanged": true
+        }
+    ],
+    "limits": "Aggregate counts do not prove cell-by-cell equality. Source migration makes no changes to original business tables. No live sale, refund, payroll or retention purge was submitted."
+}

@@ -1,0 +1,23 @@
+{
+    "date": "2026-10-26",
+    "php": "8.4.26",
+    "lint_paths": [
+        "app",
+        "bin",
+        "config",
+        "public",
+        "tests",
+        "project",
+        "routes",
+        "bootstrap",
+        "database/migrations",
+        "database/seeders"
+    ],
+    "lint_files": 366,
+    "lint_failures": [],
+    "legacy_source_hashes_checked": 259,
+    "legacy_source_hash_changes": 3,
+    "full_backup_sha256_matches": true,
+    "limits": "Syntax and original source preservation only; not workflow or deployment parity.",
+    "legacy_source_change_context": "Three separately authorized connection bootstrap changes and runtime cache markers are preserved outside this native phase. Original full SQL dump remains intact."
+}

@@ -1,0 +1,725 @@
+[
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "/",
+        "name": "home",
+        "action": "App\\Http\\Controllers\\PublicController@index",
+        "middleware": [
+            "web",
+            "throttle:120,1"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "account/leave",
+        "name": "leave.index",
+        "action": "App\\Http\\Controllers\\OwnLeaveController@index",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "account/leave",
+        "name": "leave.store",
+        "action": "App\\Http\\Controllers\\OwnLeaveController@store",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "account/overtime",
+        "name": "overtime.index",
+        "action": "App\\Http\\Controllers\\OwnOvertimeController@index",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "account/overtime",
+        "name": "overtime.store",
+        "action": "App\\Http\\Controllers\\OwnOvertimeController@store",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "account/password",
+        "name": "account.password",
+        "action": "App\\Http\\Controllers\\AccountSecurityController@update",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "account/profile",
+        "name": "profile.edit",
+        "action": "App\\Http\\Controllers\\OwnProfileController@edit",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "account/profile",
+        "name": "profile.update",
+        "action": "App\\Http\\Controllers\\OwnProfileController@update",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "account/recovery-codes",
+        "name": "mfa.recovery",
+        "action": "App\\Http\\Controllers\\Auth\\StaffAuthController@recovery",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "account/schedule",
+        "name": "schedule.index",
+        "action": "App\\Http\\Controllers\\OwnScheduleController",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "account/security",
+        "name": "account.security",
+        "action": "App\\Http\\Controllers\\AccountSecurityController@index",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "admin",
+        "name": "admin",
+        "action": "App\\Http\\Controllers\\WorkspaceController@dashboard",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "api/discount-requests",
+        "name": "discounts.available",
+        "action": "App\\Http\\Controllers\\DiscountApprovalController@available",
+        "middleware": [
+            "web",
+            "staff",
+            "role:cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "api/discount-requests",
+        "name": "discounts.store",
+        "action": "App\\Http\\Controllers\\DiscountApprovalController@store",
+        "middleware": [
+            "web",
+            "staff",
+            "role:cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "api/pos/checkout",
+        "name": "pos.checkout",
+        "action": "App\\Http\\Controllers\\PosController@checkout",
+        "middleware": [
+            "web",
+            "staff",
+            "role:cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "api/pos/lookup",
+        "name": "pos.lookup",
+        "action": "App\\Http\\Controllers\\PosController@lookup",
+        "middleware": [
+            "web",
+            "staff",
+            "role:cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "api/pos/requests/{key}",
+        "name": "pos.resolve",
+        "action": "App\\Http\\Controllers\\PosController@resolve",
+        "middleware": [
+            "web",
+            "staff",
+            "role:cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "catalog",
+        "name": "catalog",
+        "action": "App\\Http\\Controllers\\PublicController@catalog",
+        "middleware": [
+            "web",
+            "throttle:120,1"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "catalog/scan",
+        "name": "catalog.scan",
+        "action": "App\\Http\\Controllers\\PublicProductCodeController",
+        "middleware": [
+            "web",
+            "throttle:60,1"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "catalog/{id}",
+        "name": "product",
+        "action": "App\\Http\\Controllers\\PublicController@product",
+        "middleware": [
+            "web",
+            "throttle:120,1"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "compare",
+        "name": "compare",
+        "action": "App\\Http\\Controllers\\PublicController@compare",
+        "middleware": [
+            "web",
+            "throttle:120,1"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "dashboard",
+        "name": "dashboard",
+        "action": "App\\Http\\Controllers\\WorkspaceController@dashboard",
+        "middleware": [
+            "web",
+            "staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "discount-requests",
+        "name": "discounts.index",
+        "action": "App\\Http\\Controllers\\DiscountApprovalController@index",
+        "middleware": [
+            "web",
+            "staff",
+            "role:cashier,finance,admin"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "discount-requests/{id}/cancel",
+        "name": "discounts.cancel",
+        "action": "App\\Http\\Controllers\\DiscountApprovalController@cancel",
+        "middleware": [
+            "web",
+            "staff",
+            "role:cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "discount-requests/{id}/decision",
+        "name": "discounts.decide",
+        "action": "App\\Http\\Controllers\\DiscountApprovalController@decide",
+        "middleware": [
+            "web",
+            "staff",
+            "role:finance,admin"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "index",
+        "name": null,
+        "action": "Closure",
+        "middleware": [
+            "web"
+        ],
+        "path": "routes/web.php:44"
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "inventory",
+        "name": "inventory",
+        "action": "App\\Http\\Controllers\\WorkspaceController@inventory",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "inventory/restock",
+        "name": "inventory.restock",
+        "action": "App\\Http\\Controllers\\WorkspaceController@restock",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "labels",
+        "name": "labels.index",
+        "action": "App\\Http\\Controllers\\ProductLabelController@index",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "labels/print",
+        "name": "labels.print",
+        "action": "App\\Http\\Controllers\\ProductLabelController@print",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "leave-approvals",
+        "name": "leave-approvals.index",
+        "action": "App\\Http\\Controllers\\LeaveApprovalController@index",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,hr,hr_manager,supervisor"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "leave-approvals/{id}/decision",
+        "name": "leave-approvals.decide",
+        "action": "App\\Http\\Controllers\\LeaveApprovalController@decide",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,hr,hr_manager,supervisor"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "login",
+        "name": "login",
+        "action": "App\\Http\\Controllers\\Auth\\StaffAuthController@login",
+        "middleware": [
+            "web"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "login",
+        "name": "login.submit",
+        "action": "App\\Http\\Controllers\\Auth\\StaffAuthController@authenticate",
+        "middleware": [
+            "web"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "logout",
+        "name": "logout",
+        "action": "App\\Http\\Controllers\\Auth\\StaffAuthController@logout",
+        "middleware": [
+            "web"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "manage/products/{id}/information",
+        "name": "product-information.edit",
+        "action": "App\\Http\\Controllers\\ProductInformationController@edit",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "manage/products/{id}/information",
+        "name": "product-information.update",
+        "action": "App\\Http\\Controllers\\ProductInformationController@update",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "manage/{entity}",
+        "name": "manage.index",
+        "action": "App\\Http\\Controllers\\CatalogAdminController@index",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "manage/{entity}",
+        "name": "manage.store",
+        "action": "App\\Http\\Controllers\\CatalogAdminController@save",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "manage/{entity}/create",
+        "name": "manage.create",
+        "action": "App\\Http\\Controllers\\CatalogAdminController@form",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "PUT",
+        "uri": "manage/{entity}/{id}",
+        "name": "manage.update",
+        "action": "App\\Http\\Controllers\\CatalogAdminController@save",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "DELETE",
+        "uri": "manage/{entity}/{id}",
+        "name": "manage.deactivate",
+        "action": "App\\Http\\Controllers\\CatalogAdminController@deactivate",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "manage/{entity}/{id}/edit",
+        "name": "manage.edit",
+        "action": "App\\Http\\Controllers\\CatalogAdminController@form",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "overtime-approvals",
+        "name": "overtime-approvals.index",
+        "action": "App\\Http\\Controllers\\OvertimeApprovalController@index",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,supervisor"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "overtime-approvals/{id}/decision",
+        "name": "overtime-approvals.decide",
+        "action": "App\\Http\\Controllers\\OvertimeApprovalController@decide",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,supervisor"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "pos",
+        "name": "pos",
+        "action": "App\\Http\\Controllers\\PosController@index",
+        "middleware": [
+            "web",
+            "staff",
+            "role:cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "product-discounts",
+        "name": "product-discounts.index",
+        "action": "App\\Http\\Controllers\\ProductDiscountController@index",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff,finance"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "product-discounts",
+        "name": "product-discounts.store",
+        "action": "App\\Http\\Controllers\\ProductDiscountController@store",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "product-discounts/{id}/cancel",
+        "name": "product-discounts.cancel",
+        "action": "App\\Http\\Controllers\\ProductDiscountController@cancel",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,inventory_staff"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "product-discounts/{id}/decision",
+        "name": "product-discounts.decide",
+        "action": "App\\Http\\Controllers\\ProductDiscountController@decide",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,finance"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "product-image/{id}",
+        "name": "product.image",
+        "action": "App\\Http\\Controllers\\PublicController@image",
+        "middleware": [
+            "web"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "receipts/{id}",
+        "name": "receipt",
+        "action": "App\\Http\\Controllers\\PosController@receipt",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,finance,cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "reports",
+        "name": "reports",
+        "action": "App\\Http\\Controllers\\WorkspaceController@reports",
+        "middleware": [
+            "web",
+            "staff",
+            "role:admin,finance,cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "sales/{id}/refund",
+        "name": "pos.refund",
+        "action": "App\\Http\\Controllers\\PosController@refund",
+        "middleware": [
+            "web",
+            "staff",
+            "role:cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "sales/{id}/void",
+        "name": "pos.void",
+        "action": "App\\Http\\Controllers\\PosController@void",
+        "middleware": [
+            "web",
+            "staff",
+            "role:cashier"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "two-factor",
+        "name": "mfa",
+        "action": "App\\Http\\Controllers\\Auth\\StaffAuthController@challenge",
+        "middleware": [
+            "web"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "two-factor",
+        "name": "mfa.verify",
+        "action": "App\\Http\\Controllers\\Auth\\StaffAuthController@verify",
+        "middleware": [
+            "web"
+        ],
+        "path": null
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "two-factor/send",
+        "name": "mfa.send",
+        "action": "App\\Http\\Controllers\\Auth\\StaffAuthController@send",
+        "middleware": [
+            "web",
+            "throttle:10,1"
+        ],
+        "path": null
+    }
+]

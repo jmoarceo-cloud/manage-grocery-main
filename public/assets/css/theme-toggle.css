@@ -1,0 +1,145 @@
+.theme-toggle.theme-toggle,
+.theme-toggle-btn.theme-toggle-btn {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+    min-width: 40px;
+    height: 40px;
+    min-height: 40px;
+    margin: 0;
+    padding: 0 12px;
+    overflow: visible;
+    border: 1px solid var(--line, var(--border, #E2E8F0));
+    border-radius: 11px;
+    background: var(--white, var(--surface, #FFFFFF));
+    color: var(--ink, var(--text-body, #334155));
+    box-shadow: 0 2px 6px rgba(15, 23, 42, .08);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: pointer;
+    isolation: auto;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.card > .theme-toggle.theme-toggle {
+    position: absolute;
+    top: 30px;
+    right: 32px;
+}
+
+.theme-toggle.theme-toggle::before,
+.theme-toggle-btn.theme-toggle-btn::before,
+.theme-toggle.theme-toggle::after,
+.theme-toggle-btn.theme-toggle-btn::after {
+    display: none;
+    content: none;
+}
+
+.theme-toggle.theme-toggle > svg,
+.theme-toggle-btn.theme-toggle-btn > svg {
+    position: static;
+    inset: auto;
+    display: inline-block;
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    color: currentColor;
+    transform: none;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.theme-toggle.theme-toggle > span,
+.theme-toggle-btn.theme-toggle-btn > span {
+    display: inline;
+    font: inherit;
+}
+
+html:not([data-theme="dark"]) .theme-toggle .moon-icon,
+html:not([data-theme="dark"]) .theme-toggle .moon,
+html:not([data-theme="dark"]) .theme-toggle-btn .tt-icon-dark {
+    display: none;
+}
+
+html:not([data-theme="dark"]) .theme-toggle .sun-icon,
+html:not([data-theme="dark"]) .theme-toggle .sun,
+html:not([data-theme="dark"]) .theme-toggle-btn .tt-icon-light {
+    display: inline-block;
+}
+
+html[data-theme="dark"] .theme-toggle .sun-icon,
+html[data-theme="dark"] .theme-toggle .sun,
+html[data-theme="dark"] .theme-toggle-btn .tt-icon-light {
+    display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .moon-icon,
+html[data-theme="dark"] .theme-toggle .moon,
+html[data-theme="dark"] .theme-toggle-btn .tt-icon-dark {
+    display: inline-block;
+}
+
+html[data-theme="dark"] .theme-toggle.theme-toggle,
+html[data-theme="dark"] .theme-toggle-btn.theme-toggle-btn {
+    border-color: var(--line, #2A2E35);
+    background: var(--white, #1C1F24);
+    color: var(--ink, #ECEDEE);
+}
+
+.theme-toggle.theme-toggle:hover,
+.theme-toggle-btn.theme-toggle-btn:hover {
+    box-shadow: 0 4px 12px rgba(15, 23, 42, .12);
+}
+
+.theme-toggle.theme-toggle:focus-visible,
+.theme-toggle-btn.theme-toggle-btn:focus-visible {
+    outline: 2px solid var(--green-mid, #4C8DFF);
+    outline-offset: 2px;
+}
+
+.sidebar .theme-toggle-btn.theme-toggle-btn {
+    margin-inline: auto;
+}
+
+.sidebar-collapsed .theme-toggle-btn.theme-toggle-btn,
+.sidebar .theme-toggle-btn.theme-toggle-btn {
+    flex: 0 0 auto;
+}
+
+.sidebar-collapsed .theme-toggle-btn.theme-toggle-btn > span,
+.sidebar-collapsed .theme-toggle-btn.theme-toggle-btn .tt-label {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .card > .theme-toggle.theme-toggle {
+        top: 24px;
+        right: 22px;
+    }
+
+    .sidebar .theme-toggle-btn.theme-toggle-btn {
+        width: 40px;
+        min-width: 40px;
+        padding: 0;
+    }
+
+    .sidebar .theme-toggle-btn.theme-toggle-btn > span,
+    .sidebar .theme-toggle-btn.theme-toggle-btn .tt-label {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .theme-toggle,
+    .theme-toggle > svg,
+    .theme-toggle-btn,
+    .theme-toggle-btn > svg {
+        transition-duration: .01ms;
+    }
+}

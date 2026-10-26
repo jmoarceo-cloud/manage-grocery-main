@@ -1,0 +1,13 @@
+* text=auto
+.githooks/* text eol=lf
+*.wasm binary
+*.png binary
+*.jpg binary
+*.ico binary
+# Keep upstream license text and the extracted source CSS byte-identical.
+resources/fonts/**/OFL.txt whitespace=-blank-at-eol
+public/fonts/**/OFL.txt whitespace=-blank-at-eol
+resources/css/legacy/source/login.css whitespace=-blank-at-eol,-blank-at-eof
+resources/css/legacy/source/product.css whitespace=-blank-at-eol,-blank-at-eof
+resources/css/legacy/source/compare.css whitespace=-blank-at-eol,-blank-at-eof
+resources/css/legacy/source/mfa-*.css whitespace=-blank-at-eol,-blank-at-eof

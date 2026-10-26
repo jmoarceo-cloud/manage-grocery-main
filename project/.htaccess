@@ -1,0 +1,78 @@
+# ============================================================
+# Hide .php extension sa buong system (POS root, HRMS/, at
+# HRMS/payroll/) — isang file lang ito, ilalagay sa root
+# ("SIAA SYSTEM POS/.htaccess", kasabay ng index.php, login.php).
+#
+# Hindi na kailangan galawin lahat ng href="....php" na link sa
+# HRMS/includes/sidebar.php etc. — awtomatikong nire-redirect ni
+# Apache papuntang bersyon na walang .php sa address bar.
+# ============================================================
+DirectoryIndex index.php
+RewriteEngine On
+
+# ------------------------------------------------------------
+# 1) Kapag GET request at direktang tinype/na-access yung URL
+#    na may .php (halimbawa: /dashboard.php), i-redirect papunta
+#    sa bersyon na walang extension (/dashboard) para wala nang
+#    makikita sa address bar. POST lang ang sadyang hindi kasama
+#    dito para hindi mawala ang laman ng mga form (login.php,
+#    save_record.php, atbp.) kapag na-redirect — nawawala ang
+#    POST body kapag na-301-redirect ang isang POST request.
+# ------------------------------------------------------------
+RewriteCond %{REQUEST_METHOD} GET
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# ------------------------------------------------------------
+# 2) Kapag pumasok yung request na wala nang .php (halimbawa:
+#    /dashboard, /HRMS/employees, /HRMS/payroll/payroll),
+#    internally i-serve pa rin yung tunay na .php file — hindi
+#    nare-rename yung mga file, .php pa rin sila sa server,
+#    URL lang ang nagbabago.
+# ------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L]
+# ============================================================
+# SECURITY (Phase 0) - paste this at the VERY BOTTOM of your
+# existing root .htaccess. Do not delete anything above it.
+# ------------------------------------------------------------
+# 1) Never serve dotfiles over HTTP: .env (DB password, API key),
+#    .env.example, .migrations_verified, ...
+#    PHP still reads them from disk; only direct browser access
+#    is denied.
+# 2) Turn off folder listing so nobody can browse a folder
+#    (e.g. /backup/files/, /uploads/) by opening its URL.
+# ============================================================
+
+# Apache 2.4+
+<IfModule mod_authz_core.c>
+    <FilesMatch "^\.">
+        Require all denied
+    </FilesMatch>
+    <FilesMatch "\.(env|ini|log|sql|dump|bak|backup|old|orig|swp|tmp)$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# Apache 2.2 and earlier
+<IfModule !mod_authz_core.c>
+    <FilesMatch "^\.">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+    <FilesMatch "\.(env|ini|log|sql|dump|bak|backup|old|orig|swp|tmp)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
+
+Options -Indexes
+
+# Kiosk is intended for an in-store device, not the public internet.
+<Files "kiosk.php">
+    <IfModule mod_authz_core.c>
+        Require local
+        Require ip 192.168.0.0/16 10.0.0.0/8 172.16.0.0/12
+    </IfModule>
+</Files>

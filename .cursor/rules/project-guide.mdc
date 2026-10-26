@@ -1,0 +1,6 @@
+---
+description: Route project work to canonical instructions and relevant skills.
+alwaysApply: true
+---
+
+Read `AGENTS.md` at this workspace root and `.ai/README.md`. Load only the relevant project skill, then applicable scoped rules. Preserve the documented application phase and current task scope. Do not treat a tool configuration as evidence of a connected server. Keep shared rules in their canonical files.

@@ -1,0 +1,13 @@
+Options -Indexes
+RewriteEngine On
+
+RewriteRule ^$ %{REQUEST_URI}project/ [R=302,L]
+
+# Only the two deliberate application entry trees are web-accessible.
+# This also protects future root .env files, CLI tools and source snapshots.
+RewriteRule ^(?:project|public)(?:/|$) - [L]
+RewriteRule ^ - [F,L]
+
+<FilesMatch "(?i)(^\.|\.(env|ini|log|sql|dump|bak|backup|zip|gz|docx?|xlsx?)$)">
+    Require all denied
+</FilesMatch>

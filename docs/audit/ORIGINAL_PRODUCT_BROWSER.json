@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-26",
+  "reference": "Pinned original presentation only; native synthetic public data; no original bootstrap/config/query/scan logging executed",
+  "reduced_motion": true,
+  "capture": "full page",
+  "results": [
+    {
+      "viewport": "desktop",
+      "theme": "light",
+      "changed_pixels": 0,
+      "total_pixels": 1579680,
+      "ratio": 0
+    },
+    {
+      "viewport": "desktop",
+      "theme": "dark",
+      "changed_pixels": 0,
+      "total_pixels": 1579680,
+      "ratio": 0
+    },
+    {
+      "viewport": "mobile",
+      "theme": "light",
+      "changed_pixels": 0,
+      "total_pixels": 608400,
+      "ratio": 0
+    },
+    {
+      "viewport": "mobile",
+      "theme": "dark",
+      "changed_pixels": 0,
+      "total_pixels": 608400,
+      "ratio": 0
+    }
+  ]
+}

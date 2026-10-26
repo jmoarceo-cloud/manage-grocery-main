@@ -1,0 +1,6 @@
+@import './source/login.css';
+@import './source/theme-toggle.css';
+@import './source/page-controls.css';
+
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:200 800;font-display:swap;src:url('../../fonts/plus-jakarta-sans/PlusJakartaSans-Variable.ttf') format('truetype')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:100 900;font-display:swap;src:url('../../fonts/fraunces/Fraunces-Variable.ttf') format('truetype')}

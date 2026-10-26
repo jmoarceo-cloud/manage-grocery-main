@@ -1,0 +1,3 @@
+# GroceryOne engineering
+
+Trace the existing page and shared include before changing a behavior. Preserve current role/session checks and add server validation to affected actions. Do not replace custom PHP with Laravel without an explicit migration request. Inspect `project/tests/` checks and imports before running them: configuration includes can connect to databases or perform schema work. Verify isolated targets before DB-backed checks. Test transaction reconciliation and retries for sale/refund/stock/payroll changes. Keep financial approvals and private HR data boundaries intact. Use existing CSS/JS conventions and check affected allowed/denied, empty and error states.

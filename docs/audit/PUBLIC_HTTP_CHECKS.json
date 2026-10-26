@@ -1,0 +1,23 @@
+{
+    "date": "2026-10-26",
+    "checked_at": "2026-10-26T16:07:26+08:00",
+    "method": "Unauthenticated public HTTP GET; bodies neither retained nor logged",
+    "results": [
+        {
+            "url": "http://localhost/manage-grocery-main/project/index",
+            "status": 503,
+            "elapsed_ms": 3064
+        },
+        {
+            "url": "http://localhost/manage-grocery-main/public/",
+            "status": 0,
+            "elapsed_ms": 10019
+        },
+        {
+            "url": "http://localhost/manage-grocery-main/public/catalog/scan",
+            "status": 200,
+            "elapsed_ms": 319
+        }
+    ],
+    "limits": "Single current availability samples. Shared port3306 has no listener; earlier recovery HTTP200 checks are historical. No live authenticated record or transaction check."
+}
